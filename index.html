@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إلى إحسان ❤️</title>
+    <style>
+        body {
+            background-color: #ffeef2;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(255, 182, 193, 0.5);
+            text-align: center;
+            width: 80%;
+            max-width: 400px;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        /* حاوية الصورة */
+        .cat-container {
+            height: 160px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* --- رسم القطة اللطيفة بالـ CSS --- */
+        .cat-normal {
+            position: relative;
+            width: 120px;
+            height: 100px;
+            display: block;
+        }
+
+        .cat-head {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #f48fb1; /* وردي نفس لون الزر */
+            border-radius: 50% 50% 40% 40%;
+            bottom: 0;
+        }
+
+        .ear {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #f48fb1;
+            border-radius: 10px;
+            z-index: -1;
+        }
+        .ear.left { top: -10px; left: 0; transform: rotate(-15deg); }
+        .ear.right { top: -10px; right: 0; transform: rotate(15deg); }
+
+        .eye {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: #333;
+            border-radius: 50%;
+            top: 35px;
+        }
+        .eye.left { left: 25px; }
+        .eye.right { right: 25px; }
+        
+        /* لمعة العين */
+        .eye::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: #fff;
+            border-radius: 50%;
+            top: 2px;
+            left: 2px;
+        }
+
+        .blush {
+            position: absolute;
+            width: 15px;
+            height: 10px;
+            background-color: #ffcdd2;
+            border-radius: 50%;
+            top: 55px;
+            opacity: 0.7;
+        }
+        .blush.left { left: 15px; }
+        .blush.right { right: 15px; }
+
+        .nose-mouth {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .nose {
+            position: absolute;
+            width: 6px;
+            height: 4px;
+            background-color: #c2185b;
+            border-radius: 50%;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .mouth {
+            position: absolute;
+            width: 10px;
+            height: 5px;
+            border-bottom: 2px solid #333;
+            border-radius: 50%;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* --- رسم القطة الغاضبة بالـ CSS --- */
+        .cat-angry {
+            position: relative;
+            width: 120px;
+            height: 100px;
+            display: none; /* مخفية */
+        }
+
+        /* رأس أغمق وأكثر حمرة للغضب */
+        .cat-angry .cat-head {
+            background-color: #d81b60; 
+        }
+        .cat-angry .ear {
+            background-color: #d81b60;
+            top: -5px; /* أذنان مضغوطتان قليلاً */
+        }
+
+        /* عيون حمراء وحادة */
+        .cat-angry .eye {
+            background-color: #ff0000;
+            width: 14px;
+            height: 4px; /* تحويل العيون لشرطات */
+            border-radius: 0;
+            top: 38px;
+            transform: rotate(-10deg);
+            box-shadow: 0 0 5px #ff0000; /* لمعان أحمر */
+        }
+        .cat-angry .eye.right {
+            transform: rotate(10deg);
+        }
+        .cat-angry .eye::after { display: none; } /* إخفاء اللمعة */
+
+        /* فم عابس */
+        .cat-angry .mouth {
+            border-bottom: none;
+            border-top: 2px solid #333;
+            border-radius: 50% 50% 0 0;
+            top: 15px;
+        }
+
+        /* تأثير النار من العيون */
+        .fire-effect {
+            position: absolute;
+            width: 100px;
+            height: 40px;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: radial-gradient(circle, rgba(255,69,0,1) 0%, rgba(255,140,0,0) 70%);
+            filter: blur(8px);
+            opacity: 0;
+            animation: fireFlicker 0.4s infinite alternate;
+        }
+
+        .cat-angry .fire-effect {
+            opacity: 0.8;
+        }
+
+        @keyframes fireFlicker {
+            from { opacity: 0.6; transform: translateX(-50%) scale(1); }
+            to { opacity: 0.9; transform: translateX(-50%) scale(1.1); }
+        }
+
+        /* باقي الستايلات السابقة */
+        .angry-message {
+            color: #d32f2f;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        h1#question-text {
+            color: #d81b60;
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            min-height: 2.4em;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+        }
+
+        button#yes-btn {
+            background-color: #f48fb1;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 10px rgba(244, 143, 177, 0.4);
+        }
+
+        button#no-btn {
+            background-color: #f0f0f0;
+            color: #888;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .exploded-text {
+            display: none;
+            color: #d81b60;
+            font-size: 3em;
+            font-weight: bold;
+            text-align: center;
+            animation: popIn 0.5s ease;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+        }
+
+        @keyframes popIn {
+            0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+            100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+        }
+
+        @keyframes explosion-animation {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(10); opacity: 0.5; filter: blur(2px); }
+            100% { transform: scale(50); opacity: 0; display: none; }
+        }
+
+        .explosion-effect {
+            animation: explosion-animation 0.7s ease forwards;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container" id="main-container">
+        <div class="cat-container" id="cat-visual">
+            
+            <div class="cat-normal" id="normal-state">
+                <div class="ear left"></div>
+                <div class="ear right"></div>
+                <div class="cat-head">
+                    <div class="eye left"></div>
+                    <div class="eye right"></div>
+                    <div class="blush left"></div>
+                    <div class="blush right"></div>
+                    <div class="nose-mouth">
+                        <div class="nose"></div>
+                        <div class="mouth"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cat-angry" id="angry-state">
+                <div class="fire-effect"></div> <div class="ear left"></div>
+                <div class="ear right"></div>
+                <div class="cat-head">
+                    <div class="eye left"></div>
+                    <div class="eye right"></div>
+                    <div class="nose-mouth">
+                        <div class="nose"></div>
+                        <div class="mouth"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="angry-message" id="error-msg">خيري ايه 😾🔥</div>
+
+        <h1 id="question-text">تحبيني؟</h1>
+
+        <div class="buttons-container" id="btns-holder">
+            <button id="yes-btn">ايه</button>
+            <button id="no-btn">لالا</button>
+        </div>
+
+        <div class="exploded-text" id="final-message">انا ثات نحبك ❤️</div>
+    </div>
+
+    <script>
+        // المتغيرات
+        let currentQuestion = 0;
+        let yesButtonScale = 1;
+        
+        // مصفوفة الأسئلة
+        const questions = [
+            "تحبيني؟",
+            "تحبيني بزاف؟",
+            "تحبيني اكثر من اي واحد فالدنيا؟"
+        ];
+
+        // عناصر DOM
+        const questionTextElement = document.getElementById('question-text');
+        const yesBtn = document.getElementById('yes-btn');
+        const noBtn = document.getElementById('no-btn');
+        const mainContainer = document.getElementById('main-container');
+        const btnsHolder = document.getElementById('btns-holder');
+        const finalMessage = document.getElementById('final-message');
+        
+        // عناصر القطة والرسائل
+        const normalState = document.getElementById('normal-state');
+        const angryState = document.getElementById('angry-state');
+        const errorMsg = document.getElementById('error-msg');
+
+        // وظائف لتغيير الحالة المزاجية
+        function setMoodNormal() {
+            normalState.style.display = 'block';
+            angryState.style.display = 'none';
+            errorMsg.style.display = 'none';
+        }
+
+        function setMoodAngry() {
+            normalState.style.display = 'none';
+            angryState.style.display = 'block';
+            errorMsg.style.display = 'block';
+        }
+
+        // منطق الضغط على "ايه"
+        yesBtn.addEventListener('click', function() {
+            currentQuestion++;
+            yesButtonScale += 1; // يكبر بمقدار 1 مع كل ضغطة
+            yesBtn.style.transform = `scale(${yesButtonScale})`;
+
+            setMoodNormal();
+
+            if (currentQuestion < questions.length) {
+                questionTextElement.innerText = questions[currentQuestion];
+            } else {
+                startExplosionSequence();
+            }
+        });
+
+        // منطق الضغط على "لالا"
+        noBtn.addEventListener('click', function() {
+            setMoodAngry();
+        });
+
+        // وظيفة الانفجار النهائي
+        function startExplosionSequence() {
+            yesBtn.style.transition = 'none'; 
+            yesBtn.classList.add('explosion-effect');
+            
+            questionTextElement.style.transition = 'opacity 0.3s';
+            questionTextElement.style.opacity = '0';
+            document.getElementById('cat-visual').style.transition = 'opacity 0.3s';
+            document.getElementById('cat-visual').style.opacity = '0';
+            btnsHolder.style.transition = 'opacity 0.3s';
+            btnsHolder.style.opacity = '0';
+
+            setTimeout(() => {
+                btnsHolder.style.display = 'none';
+                yesBtn.style.display = 'none';
+                questionTextElement.style.display = 'none';
+                document.getElementById('cat-visual').style.display = 'none';
+
+                finalMessage.style.display = 'block';
+                
+                mainContainer.style.background = 'transparent';
+                mainContainer.style.boxShadow = 'none';
+            }, 700);
+        }
+    </script>
+</body>
+</html>
