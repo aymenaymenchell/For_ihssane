@@ -13,7 +13,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            overflow: hidden; /* ضروري لتأثير تساقط القلوب */
+            overflow: hidden;
             position: relative;
         }
 
@@ -25,22 +25,13 @@
             text-align: center;
             width: 80%;
             max-width: 400px;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
             position: relative;
-            z-index: 10; /* ليكون فوق القلوب */
-        }
-
-        /* --- حاوية الصورة --- */
-        .cat-container {
-            height: 160px;
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
+            z-index: 10;
         }
 
         /* --- القطة اللطيفة --- */
+        .cat-container { height: 160px; margin-bottom: 20px; display: flex; justify-content: center; align-items: center; position: relative; }
         .cat-normal { position: relative; width: 120px; height: 100px; display: block; }
         .cat-head { position: absolute; width: 100%; height: 100%; background-color: #f48fb1; border-radius: 50% 50% 40% 40%; bottom: 0; }
         .ear { position: absolute; width: 40px; height: 40px; background-color: #f48fb1; border-radius: 10px; z-index: -1; }
@@ -54,80 +45,45 @@
         /* --- القطة الغاضبة --- */
         .cat-angry { position: relative; width: 120px; height: 100px; display: none; }
         .cat-angry .cat-head { background-color: #d81b60; }
-        .cat-angry .ear { background-color: #d81b60; }
         .cat-angry .eye { background-color: #ff0000; width: 14px; height: 4px; border-radius: 0; top: 38px; transform: rotate(-10deg); box-shadow: 0 0 5px #ff0000; }
         .cat-angry .eye.right { transform: rotate(10deg); }
-        .cat-angry .mouth { border-bottom: none; border-top: 2px solid #333; border-radius: 50% 50% 0 0; top: 65px; }
 
-        /* تأثير الاهتزاز للغضب */
-        @keyframes catShake {
-            0% { transform: translate(1px, 1px) rotate(0deg); }
-            100% { transform: translate(-1px, -1px) rotate(1deg); }
+        h1#question-text { color: #d81b60; font-size: 1.8em; margin-bottom: 20px; min-height: 2.4em; }
+
+        /* تعديل المسافات هنا */
+        .buttons-container { 
+            display: flex; 
+            justify-content: center; 
+            gap: 40px; /* مسافة واضحة بين الأزرار */
+            align-items: center; 
+            position: relative; 
+            height: 100px; /* زيادة الطول للسماح بالحركة */
         }
-        .cat-angry.active-mood { animation: catShake 0.1s infinite alternate; }
+        
+        button#yes-btn { background-color: #f48fb1; color: #fff; border: none; padding: 15px 30px; border-radius: 50px; font-size: 1.2em; cursor: pointer; transition: all 0.3s ease; z-index: 5; }
+        
+        /* جعل زر لالا ثابت في مكانه في البداية */
+        button#no-btn { background-color: #f0f0f0; color: #888; border: none; padding: 10px 20px; border-radius: 50px; font-size: 1em; cursor: pointer; transition: all 0.2s ease; z-index: 10; }
 
-        /* تأثير النار */
-        .fire-effect { position: absolute; width: 100px; height: 40px; top: 10px; left: 50%; transform: translateX(-50%); background: radial-gradient(circle, rgba(255,69,0,1) 0%, rgba(255,140,0,0) 70%); filter: blur(8px); opacity: 0; animation: fireFlicker 0.4s infinite alternate; }
-        .cat-angry.active-mood .fire-effect { opacity: 0.8; }
-        @keyframes fireFlicker { from { opacity: 0.6; transform: translateX(-50%) scale(1); } to { opacity: 0.9; transform: translateX(-50%) scale(1.1); } }
+        /* --- خانة "و الله" --- */
+        #final-stage { display: none; margin-top: 20px; }
+        #oallah-input { padding: 10px; border: 2px solid #f48fb1; border-radius: 10px; text-align: center; font-size: 1.1em; outline: none; width: 80%; margin-bottom: 10px; }
+        #check-btn { background-color: #d81b60; color: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; }
 
-        /* رسالة الغضب */
-        .angry-message { color: #d32f2f; font-weight: bold; font-size: 1.2em; margin-bottom: 20px; display: none; }
-        .angry-message.active-mood { display: block; animation: flashMsg 1s infinite alternate; }
-        @keyframes flashMsg { from { opacity: 1; } to { opacity: 0.5; } }
+        .exploded-text { display: none; color: #d81b60; font-size: 2.5em; font-weight: bold; text-align: center; animation: popIn 0.5s ease; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap; z-index: 20; }
+        @keyframes popIn { 0% { transform: scale(0); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
 
-        /* نص السؤال */
-        h1#question-text { color: #d81b60; font-size: 1.8em; margin-bottom: 30px; min-height: 2.4em; transition: opacity 0.3s; }
-
-        /* حاوية الأزرار */
-        .buttons-container { display: flex; justify-content: center; gap: 20px; align-items: center; position: relative; height: 60px; }
-
-        /* زر ايه */
-        button#yes-btn { background-color: #f48fb1; color: #fff; border: none; padding: 15px 30px; border-radius: 50px; font-size: 1.2em; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 5px 10px rgba(244, 143, 177, 0.4); z-index: 5; }
-
-        /* زر لالا (الهرب) */
-        button#no-btn { background-color: #f0f0f0; color: #888; border: none; padding: 10px 20px; border-radius: 50px; font-size: 1em; cursor: pointer; transition: background-color 0.2s; position: absolute; z-index: 10; }
-
-        /* نص الانفجار النهائي */
-        .exploded-text { display: none; color: #d81b60; font-size: 3em; font-weight: bold; text-align: center; animation: popIn 0.5s ease; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap; z-index: 20; }
-        @keyframes popIn { 0% { transform: translate(-50%, -50%) scale(0); opacity: 0; } 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; } }
-
-        /* أنيميشن الانفجار */
-        @keyframes explosion-animation { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(10); opacity: 0.5; filter: blur(2px); } 100% { transform: scale(50); opacity: 0; display: none; } }
         .explosion-effect { animation: explosion-animation 0.7s ease forwards; }
+        @keyframes explosion-animation { 0% { transform: scale(1); } 100% { transform: scale(50); opacity: 0; } }
 
-        /* --- تأثير تساقط القلوب --- */
-        .heart {
-            position: absolute;
-            width: 15px; height: 15px;
-            background-color: #f48fb1;
-            transform: rotate(45deg);
-            opacity: 0.7;
-            animation: fall infinite linear;
-            z-index: 1;
-        }
-        .heart::before, .heart::after {
-            content: "";
-            position: absolute;
-            width: 15px; height: 15px;
-            background-color: #f48fb1;
-            border-radius: 50%;
-        }
-        .heart::before { top: -7.5px; left: 0; }
-        .heart::after { top: 0; left: -7.5px; }
-
-        @keyframes fall {
-            0% { top: -50px; transform: rotate(45deg) translateX(0); }
-            100% { top: 100vh; transform: rotate(45deg) translateX(100px); }
-        }
-
+        /* القلوب المتساقطة */
+        .heart { position: absolute; width: 15px; height: 15px; background-color: #f48fb1; transform: rotate(45deg); animation: fall 3s infinite linear; z-index: 1; }
+        .heart::before, .heart::after { content: ""; position: absolute; width: 15px; height: 15px; background-color: #f48fb1; border-radius: 50%; }
+        .heart::before { top: -7.5px; left: 0; } .heart::after { top: 0; left: -7.5px; }
+        @keyframes fall { 0% { top: -50px; } 100% { top: 100vh; } }
     </style>
 </head>
 <body>
-
-    <audio id="bg-music" loop>
-        <source src="رابط_مباشر_لملف_صوتي_mp3_هنا" type="audio/mpeg">
-    </audio>
 
     <div class="container" id="main-container">
         <div class="cat-container" id="cat-visual">
@@ -136,13 +92,11 @@
                 <div class="cat-head"><div class="eye left"></div><div class="eye right"></div><div class="nose"></div><div class="mouth"></div></div>
             </div>
             <div class="cat-angry" id="angry-state">
-                <div class="fire-effect"></div>
                 <div class="ear left"></div><div class="ear right"></div>
                 <div class="cat-head"><div class="eye left"></div><div class="eye right"></div><div class="nose"></div><div class="mouth"></div></div>
             </div>
         </div>
 
-        <div class="angry-message" id="error-msg">خيري ايه 😾🔥</div>
         <h1 id="question-text">تحبيني؟</h1>
 
         <div class="buttons-container" id="btns-holder">
@@ -150,117 +104,100 @@
             <button id="no-btn">لالا</button>
         </div>
 
-        <div class="exploded-text" id="final-message">انا ثات نحبك ❤️</div>
+        <div id="final-stage">
+            <p style="color: #d81b60; font-weight: bold;">قولي و الله:</p>
+            <input type="text" id="oallah-input" placeholder="اكتبي هنا...">
+            <br>
+            <button id="check-btn">تأكيد</button>
+            <p id="error-feedback" style="color: red; font-size: 0.9em; margin-top: 10px;"></p>
+        </div>
+
+        <div class="exploded-text" id="final-message">انا ثان نحبك ❤️</div>
     </div>
 
     <script>
         const questions = ["تحبيني؟", "تحبيني بزاف؟", "تحبيني اكثر من اي واحد فالدنيا؟"];
         let currentQuestion = 0;
-        let yesButtonScale = 1;
-        
-        const qText = document.getElementById('question-text');
+        let yesScale = 1;
+
         const yesBtn = document.getElementById('yes-btn');
         const noBtn = document.getElementById('no-btn');
-        const mainContainer = document.getElementById('main-container');
-        const finalMessage = document.getElementById('final-message');
-        const normalState = document.getElementById('normal-state');
-        const angryState = document.getElementById('angry-state');
-        const errorMsg = document.getElementById('error-msg');
-        const bgMusic = document.getElementById('bg-music');
+        const qText = document.getElementById('question-text');
+        const finalStage = document.getElementById('final-stage');
+        const oallahInput = document.getElementById('oallah-input');
+        const checkBtn = document.getElementById('check-btn');
+        const errorFeedback = document.getElementById('error-feedback');
 
-        // وظائف تغيير الحالة
-        function setMood(mood) {
-            if (mood === 'angry') {
-                normalState.style.display = 'none';
-                angryState.style.display = 'block';
-                angryState.classList.add('active-mood');
-                errorMsg.classList.add('active-mood');
-            } else {
-                normalState.style.display = 'block';
-                angryState.style.display = 'none';
-                angryState.classList.remove('active-mood');
-                errorMsg.classList.remove('active-mood');
-            }
+        // وظيفة تحريك زر لالا
+        function moveNo() {
+            // تحويل الزر إلى وضع مطلق فقط عند الحاجة للهرب
+            noBtn.style.position = "absolute";
+            
+            // حساب حدود عشوائية بعيدة عن زر "ايه"
+            const x = Math.random() * (window.innerWidth - 100) - window.innerWidth/2;
+            const y = Math.random() * (window.innerHeight - 150) - window.innerHeight/2;
+            
+            noBtn.style.transform = `translate(${x}px, ${y}px)`;
         }
 
-        // منطق الهرب لزر "لالا" (The Runaway logic)
-        function moveButton() {
-            // حساب حدود الـ container أو الشاشة
-            const container = document.getElementById('btns-holder');
-            const containerRect = container.getBoundingClientRect();
-            
-            // حساب الموضع الجديد العشوائي داخل حدود الـ container
-            const maxX = containerRect.width - noBtn.offsetWidth;
-            const maxY = 200; // مسافة عشوائية للأعلى
-            
-            const randomX = Math.floor(Math.random() * maxX) - (maxX/2); // عشوائي أفقي
-            const randomY = Math.floor(Math.random() * maxY) - (maxY/2); // عشوائي عمودي
+        noBtn.addEventListener('mouseover', moveNo);
+        noBtn.addEventListener('touchstart', (e) => {
+            e.preventDefault(); // منع الضغط في الجوال وتفعيل الهرب
+            moveNo();
+        });
 
-            noBtn.style.transition = 'all 0.1s ease-out'; // حركة سريعة ومفاجئة
-            noBtn.style.left = `${randomX}px`;
-            noBtn.style.top = `${randomY}px`;
-        }
-
-        // تفعيل الهرب عند التمرير بالماوس أو اللمس
-        noBtn.addEventListener('mouseover', moveButton);
-        noBtn.addEventListener('touchstart', moveButton); // مهم لأجهزة اللمس
-
-        // منطق "ايه"
-        yesBtn.addEventListener('click', function() {
-            // تشغيل الموسيقى عند أول ضغطة
-            if (currentQuestion === 0) {
-                bgMusic.play().catch(error => console.log("المتصفح منع التشغيل التلقائي للصوت"));
-            }
-
+        // منطق نعم
+        yesBtn.addEventListener('click', () => {
             currentQuestion++;
-            yesButtonScale += 1.2;
-            yesBtn.style.transform = `scale(${yesButtonScale})`;
-            setMood('normal');
+            yesScale += 1.2;
+            yesBtn.style.transform = `scale(${yesScale})`;
             
-            // إعادة تعيين زر لالا
-            noBtn.style.left = 'auto';
-            noBtn.style.top = 'auto';
-            noBtn.style.position = 'static';
-            setTimeout(() => { noBtn.style.position = 'absolute'; }, 10);
+            // إعادة تعيين القطة للحالة العادية إذا كانت غاضبة
+            document.getElementById('normal-state').style.display = 'block';
+            document.getElementById('angry-state').style.display = 'none';
+            errorFeedback.innerText = "";
 
-            if (currentQuestion < questions.length) {
+            if(currentQuestion < questions.length) {
                 qText.innerText = questions[currentQuestion];
             } else {
-                startExplosionSequence();
+                yesBtn.classList.add('explosion-effect');
+                setTimeout(() => {
+                    document.getElementById('btns-holder').style.display = 'none';
+                    qText.innerText = "امممم صح؟";
+                    finalStage.style.display = 'block';
+                }, 700);
             }
         });
 
-        // وظيفة الانفجار النهائي وتساقط القلوب
-        function startExplosionSequence() {
-            yesBtn.classList.add('explosion-effect');
+        // التأكد من كلمة "و الله"
+        checkBtn.addEventListener('click', () => {
+            const val = oallahInput.value.trim();
+            if (val === "و الله" || val === "والله") {
+                startHearts();
+            } else {
+                errorFeedback.innerText = `قتلك قولي و الله مشي "${val}" 😾`;
+                document.getElementById('normal-state').style.display = 'none';
+                document.getElementById('angry-state').style.display = 'block';
+            }
+        });
+
+        function startHearts() {
+            finalStage.style.display = 'none';
+            qText.style.display = 'none';
+            document.getElementById('cat-visual').style.display = 'none';
+            document.getElementById('main-container').style.background = 'transparent';
+            document.getElementById('main-container').style.boxShadow = 'none';
+            document.getElementById('final-message').style.display = 'block';
             
-            qText.style.opacity = '0';
-            document.getElementById('cat-visual').style.opacity = '0';
-            document.getElementById('btns-holder').style.opacity = '0';
-
-            // تفعيل تساقط القلوب
-            for (let i = 0; i < 30; i++) { createHeart(); }
-
-            setTimeout(() => {
-                document.getElementById('btns-holder').style.display = 'none';
-                qText.style.display = 'none';
-                document.getElementById('cat-visual').style.display = 'none';
-                finalMessage.style.display = 'block';
-                mainContainer.style.background = 'transparent';
-                mainContainer.style.boxShadow = 'none';
-            }, 700);
+            for (let i = 0; i < 50; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.animationDuration = (Math.random() * 2 + 2) + "s";
+                heart.style.delay = Math.random() * 2 + "s";
+                document.body.appendChild(heart);
+            }
         }
-
-        // إنشاء قلب متساقط
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            heart.style.left = Math.random() * 100 + "vw";
-            heart.style.animationDuration = Math.random() * 3 + 2 + "s"; // مدة مختلفة
-            document.body.appendChild(heart);
-            setTimeout(() => { heart.remove(); }, 5000); // إزالة القلب بعد السقوط
-        }
-
     </script>
 </body>
 </html>
