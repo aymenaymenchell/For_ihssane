@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عقارات الجزائر | DZ Real Estate</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{--primary:#1B3A4B;--primary-light:#2C5468;--gold:#C65D3B;--gold-light:#D97B57;--sand:#E8DCC4;--olive:#5C6B47;--bg:#FAF7F2;--bg2:#FFFFFF;--bg3:#F3EEE4;--text:#1E2A2E;--text2:#4E5D5F;--text3:#7A8688;--border:#E4DDD0;--shadow:0 4px 20px rgba(27,58,75,0.08);--shadow-hover:0 10px 34px rgba(27,58,75,0.16);--radius:14px;--radius-sm:9px;--success:#3F7D5C;--danger:#B84A3C;--warning:#C08A2E;--info:#3A6B8A;--font-ar:'Cairo',sans-serif;--font-fr:'Fraunces','Inter',sans-serif;--font-ui:'Inter',sans-serif;--transition:all 0.3s ease;}
+[data-theme="dark"]{--primary:#2C5468;--gold:#D97B57;--gold-light:#E8946E;--sand:#3A3428;--olive:#6E8058;--bg:#131C1F;--bg2:#1B282C;--bg3:#16211F;--text:#EDE8DD;--text2:#B8AF9E;--text3:#8A8577;--border:#2E3A38;--shadow:0 4px 20px rgba(0,0,0,0.4);--shadow-hover:0 10px 34px rgba(0,0,0,0.55);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-ar);background:var(--bg);color:var(--text);transition:var(--transition);line-height:1.6;overflow-x:hidden;}
+body.ltr{font-family:var(--font-ui);direction:ltr}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+button{cursor:pointer;border:none;outline:none;font-family:inherit}
+input,select,textarea{font-family:inherit;outline:none}
+ul{list-style:none}
+.hidden{display:none!important}
+.container{max-width:1280px;margin:0 auto;padding:0 20px}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--bg3)}
+::-webkit-scrollbar-thumb{background:var(--primary);border-radius:4px}
+/* NAVBAR */
+#navbar{position:sticky;top:0;z-index:1000;background:var(--bg2);border-bottom:1px solid var(--border);box-shadow:var(--shadow);transition:var(--transition);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1280px;margin:0 auto;gap:16px;}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:1.3rem;font-weight:800;color:var(--primary);cursor:pointer;white-space:nowrap;}
+.nav-logo span{color:var(--gold)}
+.nav-logo i{font-size:1.6rem;color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:4px;flex-wrap:wrap;}
+.nav-links a{padding:8px 14px;border-radius:var(--radius-sm);font-size:0.9rem;font-weight:500;color:var(--text2);transition:var(--transition);white-space:nowrap;}
+.nav-links a:hover,.nav-links a.active{background:var(--primary);color:#fff;}
+.nav-links a.post-btn{background:var(--gold);color:#fff;font-weight:700;}
+.nav-links a.post-btn:hover{background:var(--gold-light)}
+.nav-actions{display:flex;align-items:center;gap:8px}
+.nav-actions button{width:38px;height:38px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);color:var(--text2);font-size:1rem;display:flex;align-items:center;justify-content:center;transition:var(--transition);}
+.nav-actions button:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+#lang-btn{background:var(--primary)!important;color:#fff!important;border-color:var(--primary)!important;font-size:0.75rem!important;font-weight:700;width:42px!important;border-radius:8px!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:8px;background:transparent;border:none}
+.hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:var(--transition)}
+@media(max-width:900px){.nav-links{display:none;position:fixed;top:65px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);flex-direction:column;padding:16px;gap:4px;z-index:999;box-shadow:var(--shadow);}.nav-links.open{display:flex}.nav-links a{width:100%;text-align:center}.hamburger{display:flex}}
+/* PAGES */
+.page{display:none}.page.active{display:block}
+/* HERO */
+#hero{position:relative;min-height:540px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+#hero::before{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(27,58,75,0.94) 0%,rgba(27,58,75,0.82) 55%,rgba(198,93,59,0.35) 100%);z-index:1;}
+#hero::after{content:'';position:absolute;inset:0;z-index:1;opacity:0.15;background-image:
+  linear-gradient(45deg, transparent 48%, rgba(232,220,196,0.4) 49%, rgba(232,220,196,0.4) 51%, transparent 52%),
+  linear-gradient(-45deg, transparent 48%, rgba(232,220,196,0.4) 49%, rgba(232,220,196,0.4) 51%, transparent 52%);
+  background-size:44px 44px;}
+#hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80') center/cover no-repeat;z-index:0;}
+.hero-content{position:relative;z-index:2;text-align:center;color:#fff;padding:40px 20px;max-width:860px;width:100%;}
+.hero-content h1{font-size:2.9rem;font-weight:800;letter-spacing:-0.01em;text-shadow:0 2px 14px rgba(0,0,0,0.35);margin-bottom:10px;}
+body.ltr .hero-content h1{font-family:var(--font-fr);font-weight:600;font-optical-sizing:auto;}
+.hero-content p{font-size:1.1rem;opacity:0.9;margin-bottom:30px}
+/* SEARCH BOX */
+#search-box{background:var(--bg2);border-radius:var(--radius);box-shadow:0 8px 40px rgba(0,0,0,0.25);padding:24px;max-width:800px;margin:0 auto;}
+.search-row{display:flex;gap:10px;align-items:center}
+.search-input-wrap{position:relative;flex:1}
+#main-search{width:100%;height:52px;padding:0 16px;border:2px solid var(--border);border-radius:var(--radius-sm);font-size:1rem;background:var(--bg);color:var(--text);transition:var(--transition);}
+#main-search:focus{border-color:var(--primary)}
+#autocomplete-list{position:absolute;top:100%;left:0;right:0;z-index:100;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-sm);box-shadow:var(--shadow);max-height:250px;overflow-y:auto;}
+#autocomplete-list div{padding:10px 16px;cursor:pointer;transition:var(--transition);font-size:0.9rem;color:var(--text2);}
+#autocomplete-list div:hover{background:var(--bg3);color:var(--primary)}
+.btn-search{height:52px;padding:0 28px;background:var(--primary);color:#fff;border-radius:var(--radius-sm);font-size:1rem;font-weight:700;transition:var(--transition);white-space:nowrap;}
+.btn-search:hover{background:var(--primary-light);transform:translateY(-1px)}
+.btn-filter{height:52px;padding:0 18px;background:var(--bg3);color:var(--text2);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:0.9rem;transition:var(--transition);}
+.btn-filter:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+/* FILTERS */
+#advanced-filters{margin-top:16px;padding-top:16px;border-top:1px solid var(--border);display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;}
+.filter-group label{display:block;font-size:0.82rem;font-weight:600;color:var(--text2);margin-bottom:4px;}
+.filter-group select,.filter-group input{width:100%;height:40px;padding:0 10px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--bg);color:var(--text);font-size:0.9rem;transition:var(--transition);}
+.filter-group select:focus,.filter-group input:focus{border-color:var(--primary)}
+.type-btns{display:flex;gap:6px}
+.type-btn{flex:1;height:38px;border:2px solid var(--border);border-radius:var(--radius-sm);font-size:0.85rem;font-weight:600;color:var(--text2);background:var(--bg);transition:var(--transition);}
+.type-btn.active,.type-btn:hover{background:var(--primary);color:#fff;border-color:var(--primary);}
+.filter-actions{grid-column:1/-1;display:flex;gap:10px;justify-content:flex-end;}
+.btn-reset{padding:8px 20px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text2);font-size:0.9rem;transition:var(--transition);}
+.btn-reset:hover{background:var(--danger);color:#fff;border-color:var(--danger)}
+/* STATS BAR */
+#stats-bar{background:var(--primary);color:#fff;padding:16px 0;}
+.stats-inner{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;}
+.stat-item{text-align:center}
+.stat-item .num{font-size:1.8rem;font-weight:800;color:var(--gold);}
+.stat-item .lbl{font-size:0.85rem;opacity:0.85}
+/* SECTION */
+.section{padding:50px 0}
+.section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px;}
+.section-title{font-size:1.5rem;font-weight:800;color:var(--primary);position:relative;padding-right:20px;}
+body.ltr .section-title{padding-right:0;padding-left:20px}
+.section-title::before{content:'';position:absolute;right:0;top:50%;transform:translateY(-50%) rotate(45deg);width:10px;height:10px;background:var(--gold);border-radius:2px;}
+body.ltr .section-title::before{right:auto;left:0}
+/* SORT BAR */
+#sort-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px;}
+#sort-bar select{padding:8px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--bg2);color:var(--text);font-size:0.9rem;}
+#results-count{font-size:0.9rem;color:var(--text3);background:var(--bg3);padding:6px 14px;border-radius:var(--radius-sm);}
+/* CARDS */
+#listings-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;}
+.listing-card{background:var(--bg2);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden;transition:var(--transition);cursor:pointer;position:relative;}
+.listing-card:hover{transform:translateY(-4px) scale(1.01);box-shadow:var(--shadow-hover);}
+.listing-card.vip{border:1.5px solid var(--gold);box-shadow:0 4px 22px rgba(198,93,59,0.2);}
+.card-img{position:relative;height:200px;overflow:hidden;background:var(--bg3);}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:var(--transition);}
+.listing-card:hover .card-img img{transform:scale(1.05)}
+.card-badge{position:absolute;top:10px;right:10px;padding:4px 10px;border-radius:20px;font-size:0.75rem;font-weight:700;}
+body.ltr .card-badge{right:auto;left:10px}
+.badge-rent{background:#38A169;color:#fff}
+.badge-sale{background:#3182CE;color:#fff}
+.badge-vip{position:absolute;top:10px;left:10px;background:var(--gold);color:#fff;padding:4px 12px 4px 10px;border-radius:3px;font-size:0.72rem;font-weight:700;letter-spacing:0.03em;box-shadow:0 2px 8px rgba(198,93,59,0.35);}
+body.ltr .badge-vip{left:auto;right:10px}
+.card-fav{position:absolute;bottom:10px;right:10px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.9);display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:1rem;transition:var(--transition);border:none;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.15);}
+body.ltr .card-fav{right:auto;left:10px}
+.card-fav.active,.card-fav:hover{color:var(--danger)}
+.card-body{padding:16px}
+.card-type{font-size:0.78rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+.card-price{font-size:1.35rem;font-weight:800;color:var(--primary);margin-bottom:6px;}
+body.ltr .card-price{font-family:var(--font-fr);font-weight:600;}
+.card-price span{font-size:0.8rem;font-weight:500;color:var(--text3)}
+.card-loc{display:flex;align-items:center;gap:6px;font-size:0.88rem;color:var(--text2);margin-bottom:10px;}
+.card-loc i{color:var(--gold);font-size:0.9rem}
+.card-meta{display:flex;gap:12px;flex-wrap:wrap;padding-top:10px;border-top:1px solid var(--border);}
+.meta-item{display:flex;align-items:center;gap:5px;font-size:0.82rem;color:var(--text3);}
+.meta-item i{color:var(--primary);font-size:0.85rem}
+/* PAGINATION */
+#pagination{display:flex;justify-content:center;gap:8px;margin-top:32px;flex-wrap:wrap;}
+.page-btn{width:40px;height:40px;border-radius:var(--radius-sm);background:var(--bg2);border:1px solid var(--border);color:var(--text2);font-size:0.9rem;font-weight:600;transition:var(--transition);}
+.page-btn:hover,.page-btn.active{background:var(--primary);color:#fff;border-color:var(--primary);}
+/* NO RESULTS */
+#no-results{text-align:center;padding:60px 20px;background:var(--bg2);border-radius:var(--radius);border:1px solid var(--border);}
+#no-results i{font-size:3rem;color:var(--text3);margin-bottom:16px}
+/* LOADING */
+#loading-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;}
+.spinner{width:56px;height:56px;border:5px solid rgba(255,255,255,0.2);border-top-color:var(--gold);border-radius:50%;animation:spin 0.8s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* FORM */
+.form-page{max-width:800px;margin:0 auto;padding:40px 20px}
+.form-card{background:var(--bg2);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border);padding:32px;}
+.form-title{font-size:1.6rem;font-weight:800;color:var(--primary);margin-bottom:8px;}
+.form-subtitle{font-size:0.9rem;color:var(--text3);margin-bottom:28px}
+.steps-nav{display:flex;gap:0;margin-bottom:32px;border-radius:var(--radius-sm);overflow:hidden;border:1px solid var(--border);}
+.step-tab{flex:1;padding:12px 8px;text-align:center;font-size:0.82rem;font-weight:600;background:var(--bg3);color:var(--text3);border-right:1px solid var(--border);transition:var(--transition);cursor:pointer;}
+body.ltr .step-tab{border-right:none;border-left:1px solid var(--border)}
+.step-tab:last-child{border:none}
+.step-tab.active{background:var(--primary);color:#fff}
+.step-tab.done{background:var(--success);color:#fff}
+.step-content{display:none}
+.step-content.active{display:block}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:0.88rem;font-weight:600;color:var(--text2);margin-bottom:6px;}
+.form-group label span.req{color:var(--danger)}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:var(--radius-sm);background:var(--bg);color:var(--text);font-size:0.95rem;transition:var(--transition);}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(26,54,93,0.1)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:600px){.form-row{grid-template-columns:1fr}}
+.input-hint{font-size:0.78rem;color:var(--text3);margin-top:4px}
+.char-count{font-size:0.78rem;color:var(--text3);text-align:left;margin-top:2px}
+/* TYPE GRID */
+.type-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;}
+.type-card{padding:14px 8px;border:2px solid var(--border);border-radius:var(--radius-sm);text-align:center;cursor:pointer;transition:var(--transition);background:var(--bg);}
+.type-card:hover{border-color:var(--primary);background:var(--bg3)}
+.type-card.active{border-color:var(--primary);background:var(--primary);color:#fff;}
+.type-card i{font-size:1.4rem;margin-bottom:6px;display:block}
+.type-card span{font-size:0.8rem;font-weight:600}
+/* PRICE SUGGESTION */
+#price-suggestion{background:rgba(198,93,59,0.1);border:1px solid var(--gold);border-radius:var(--radius-sm);padding:10px 14px;font-size:0.85rem;color:var(--text2);margin-top:8px;}
+#price-suggestion i{color:var(--gold)}
+/* IMAGE PREVIEW */
+#image-preview{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px;margin-top:10px;}
+.img-thumb{position:relative;height:80px;border-radius:var(--radius-sm);overflow:hidden;background:var(--bg3);}
+.img-thumb img{width:100%;height:100%;object-fit:cover}
+.img-thumb button{position:absolute;top:4px;right:4px;width:20px;height:20px;border-radius:50%;background:var(--danger);color:#fff;font-size:0.7rem;display:flex;align-items:center;justify-content:center;}
+/* STEP NAV */
+.step-nav-btns{display:flex;justify-content:space-between;align-items:center;margin-top:28px;padding-top:20px;border-top:1px solid var(--border);}
+.btn-prev,.btn-next,.btn-submit{padding:12px 28px;border-radius:var(--radius-sm);font-size:0.95rem;font-weight:700;transition:var(--transition);}
+.btn-prev{background:var(--bg3);color:var(--text2);border:1px solid var(--border);}
+.btn-prev:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+.btn-next{background:var(--primary);color:#fff}
+.btn-next:hover{background:var(--primary-light);transform:translateY(-1px)}
+/* PRICING */
+#pricing-info{background:var(--bg3);border-radius:var(--radius-sm);padding:20px;margin-bottom:20px;}
+.pricing-row{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);}
+.pricing-row:last-child{border:none}
+.pricing-row .price-label{font-size:0.9rem;color:var(--text2)}
+.pricing-row .price-value{font-size:1rem;font-weight:700;color:var(--primary);}
+.vip-toggle{display:flex;align-items:center;gap:10px;padding:14px;background:rgba(198,93,59,0.1);border:1px solid var(--gold);border-radius:var(--radius-sm);cursor:pointer;margin-bottom:16px;}
+.vip-toggle input{width:18px;height:18px;accent-color:var(--gold)}
+.vip-toggle label{cursor:pointer;flex:1}
+.vip-toggle .vip-price{font-size:1.1rem;font-weight:800;color:var(--gold);}
+.pay-methods{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.pay-method-btn{flex:1;min-width:130px;padding:16px 12px;border:2px solid var(--border);border-radius:var(--radius-sm);background:var(--bg);text-align:center;cursor:pointer;transition:var(--transition);}
+.pay-method-btn:hover{border-color:var(--primary);transform:translateY(-2px)}
+.pay-method-btn i{font-size:1.8rem;color:var(--primary);margin-bottom:6px;display:block}
+.pay-method-btn span{font-size:0.85rem;font-weight:700;color:var(--text)}
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:20px;}
+.modal-box{background:var(--bg2);border-radius:var(--radius);box-shadow:0 20px 60px rgba(0,0,0,0.3);padding:32px;max-width:520px;width:100%;position:relative;max-height:90vh;overflow-y:auto;}
+.modal-box h2{font-size:1.4rem;font-weight:800;color:var(--primary);margin-bottom:6px;}
+.modal-box p{font-size:0.9rem;color:var(--text2);margin-bottom:20px}
+.modal-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:var(--bg3);color:var(--text3);display:flex;align-items:center;justify-content:center;font-size:1rem;transition:var(--transition);}
+body.ltr .modal-close{right:auto;left:14px}
+.modal-close:hover{background:var(--danger);color:#fff}
+.pay-success{text-align:center;padding:20px}
+.pay-success i{font-size:3.5rem;color:var(--success);margin-bottom:12px;display:block}
+.pay-success h3{font-size:1.3rem;font-weight:700;color:var(--success);margin-bottom:8px}
+.ref-code{background:var(--bg3);padding:10px 16px;border-radius:var(--radius-sm);font-size:1.1rem;font-weight:700;color:var(--primary);letter-spacing:2px;margin:10px 0;border:1px dashed var(--primary);display:inline-block;}
+/* PAGE HEADER */
+.page-header{background:linear-gradient(150deg,var(--primary) 0%,var(--primary-light) 65%,#3D6A50 130%);color:#fff;padding:52px 20px 42px;text-align:center;}
+.page-header h1{font-size:2rem;font-weight:800;margin-bottom:8px}
+.page-header p{font-size:1rem;opacity:0.85}
+/* STATS CARDS */
+.stats-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:32px;}
+.stat-card{background:var(--bg2);border-radius:var(--radius);padding:20px;text-align:center;box-shadow:var(--shadow);border:1px solid var(--border);}
+.stat-card i{font-size:1.8rem;color:var(--gold);margin-bottom:8px}
+.stat-card .val{font-size:1.6rem;font-weight:800;color:var(--primary)}
+.stat-card .lbl{font-size:0.82rem;color:var(--text3)}
+/* TABLE */
+.listings-table-wrap{background:var(--bg2);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden;overflow-x:auto;}
+.listings-table{width:100%;border-collapse:collapse}
+.listings-table th{background:var(--primary);color:#fff;padding:12px 16px;font-size:0.85rem;font-weight:600;text-align:right;}
+body.ltr .listings-table th{text-align:left}
+.listings-table td{padding:12px 16px;border-bottom:1px solid var(--border);font-size:0.88rem;color:var(--text2);vertical-align:middle;}
+.listings-table tr:last-child td{border:none}
+.listings-table tr:hover td{background:var(--bg3)}
+.status-badge{padding:4px 10px;border-radius:20px;font-size:0.78rem;font-weight:700;}
+.status-active{background:rgba(56,161,105,0.15);color:#38A169}
+.status-sold{background:rgba(49,130,206,0.15);color:#3182CE}
+.status-expired{background:rgba(113,128,150,0.15);color:#718096}
+.status-rented{background:rgba(214,158,46,0.15);color:#D69E2E}
+.action-btns{display:flex;gap:6px;flex-wrap:wrap}
+.btn-sm{padding:5px 10px;border-radius:6px;font-size:0.78rem;font-weight:600;transition:var(--transition);}
+.btn-edit{background:rgba(49,130,206,0.1);color:#3182CE}
+.btn-edit:hover{background:#3182CE;color:#fff}
+.btn-delete{background:rgba(229,62,62,0.1);color:#E53E3E}
+.btn-delete:hover{background:#E53E3E;color:#fff}
+.btn-sold{background:rgba(56,161,105,0.1);color:#38A169}
+.btn-sold:hover{background:#38A169;color:#fff}
+.thumb-sm{width:60px;height:45px;object-fit:cover;border-radius:6px;background:var(--bg3);}
+/* DETAIL PAGE */
+.detail-layout{display:grid;grid-template-columns:1fr 350px;gap:28px;max-width:1200px;margin:0 auto;padding:32px 20px;}
+@media(max-width:900px){.detail-layout{grid-template-columns:1fr}}
+#detail-gallery{border-radius:var(--radius);overflow:hidden;background:var(--bg3);margin-bottom:20px;}
+#main-img{width:100%;height:380px;object-fit:cover;display:block}
+.gallery-thumbs{display:flex;gap:8px;padding:10px;overflow-x:auto;background:var(--bg2);}
+.gallery-thumbs img{width:80px;height:60px;object-fit:cover;border-radius:6px;cursor:pointer;border:2px solid transparent;flex-shrink:0;transition:var(--transition);}
+.gallery-thumbs img:hover,.gallery-thumbs img.active{border-color:var(--primary)}
+.detail-section{background:var(--bg2);border-radius:var(--radius);padding:20px;margin-bottom:16px;box-shadow:var(--shadow);border:1px solid var(--border);}
+.detail-section h3{font-size:1rem;font-weight:700;color:var(--primary);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;}
+.detail-attrs{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.attr-item{display:flex;flex-direction:column;gap:2px;padding:8px;background:var(--bg3);border-radius:8px;}
+.attr-label{font-size:0.75rem;color:var(--text3);font-weight:600}
+.attr-val{font-size:0.92rem;color:var(--text);font-weight:600}
+.detail-sidebar{position:sticky;top:90px;height:fit-content}
+.contact-card{background:var(--bg2);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);border:1px solid var(--border);margin-bottom:16px;}
+.seller-info{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--border);}
+.seller-avatar{width:50px;height:50px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:700;flex-shrink:0;}
+.seller-name{font-weight:700;color:var(--text);margin-bottom:2px}
+.seller-joined{font-size:0.78rem;color:var(--text3)}
+.contact-btns{display:flex;flex-direction:column;gap:10px}
+.btn-call,.btn-wa,.btn-msg{width:100%;padding:12px;border-radius:var(--radius-sm);font-size:0.95rem;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px;transition:var(--transition);}
+.btn-call{background:var(--primary);color:#fff}
+.btn-call:hover{background:var(--primary-light)}
+.btn-wa{background:#25D366;color:#fff}
+.btn-wa:hover{background:#1ebe5a}
+.btn-msg{background:var(--bg3);color:var(--text);border:1px solid var(--border)}
+.btn-msg:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+#phone-reveal{background:var(--bg3);border:1px dashed var(--border);border-radius:var(--radius-sm);padding:10px;text-align:center;margin-bottom:10px;cursor:pointer;font-size:0.88rem;color:var(--text2);transition:var(--transition);}
+#phone-reveal:hover{border-color:var(--primary);color:var(--primary)}
+.share-btns{display:flex;gap:8px;flex-wrap:wrap}
+.share-btn{flex:1;min-width:80px;padding:9px 10px;border-radius:var(--radius-sm);font-size:0.82rem;font-weight:600;display:flex;align-items:center;justify-content:center;gap:6px;transition:var(--transition);border:1px solid var(--border);background:var(--bg3);color:var(--text2);}
+.share-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.similar-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.similar-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;cursor:pointer;transition:var(--transition);}
+.similar-card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.similar-card img{width:100%;height:70px;object-fit:cover}
+.similar-card-body{padding:8px}
+.similar-card-price{font-size:0.85rem;font-weight:700;color:var(--primary)}
+.similar-card-loc{font-size:0.75rem;color:var(--text3)}
+/* FAVORITES */
+.fav-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;}
+/* ALERTS */
+.alerts-section{max-width:700px;margin:0 auto;padding:40px 20px}
+.alert-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:var(--shadow);}
+.alert-info h4{font-size:0.95rem;font-weight:700;color:var(--text);margin-bottom:4px}
+.alert-info p{font-size:0.8rem;color:var(--text3)}
+/* ADMIN */
+.admin-layout{display:grid;grid-template-columns:240px 1fr;min-height:calc(100vh - 65px);}
+.admin-sidebar{background:var(--primary);color:#fff;padding:20px 0;}
+.admin-sidebar h3{padding:0 20px 16px;font-size:0.9rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid rgba(255,255,255,0.1);margin-bottom:8px;}
+.admin-nav a{display:flex;align-items:center;gap:10px;padding:12px 20px;font-size:0.9rem;color:rgba(255,255,255,0.8);transition:var(--transition);cursor:pointer;border-right:3px solid transparent;}
+body.ltr .admin-nav a{border-right:none;border-left:3px solid transparent}
+.admin-nav a:hover,.admin-nav a.active{background:rgba(255,255,255,0.1);color:#fff;border-color:var(--gold);}
+.admin-content{padding:28px;background:var(--bg);max-height:calc(100vh - 65px);overflow-y:auto;}
+.admin-section{display:none}
+.admin-section.active{display:block}
+.admin-stat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:28px;}
+.admin-stat-card{background:var(--bg2);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);border:1px solid var(--border);display:flex;align-items:center;gap:16px;}
+.admin-stat-icon{width:50px;height:50px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.3rem;}
+.admin-stat-text .val{font-size:1.5rem;font-weight:800;color:var(--primary)}
+.admin-stat-text .lbl{font-size:0.8rem;color:var(--text3)}
+.admin-table-wrap{background:var(--bg2);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden;overflow-x:auto;margin-bottom:20px;}
+.admin-table{width:100%;border-collapse:collapse;white-space:nowrap}
+.admin-table th{background:var(--primary);color:#fff;padding:10px 14px;font-size:0.82rem;font-weight:600;text-align:right;}
+body.ltr .admin-table th{text-align:left}
+.admin-table td{padding:10px 14px;border-bottom:1px solid var(--border);font-size:0.83rem;color:var(--text2);}
+.admin-table tr:hover td{background:var(--bg3)}
+/* ADMIN LOGIN */
+#admin-login{min-height:calc(100vh - 65px);display:flex;align-items:center;justify-content:center;padding:20px;}
+.login-card{background:var(--bg2);border-radius:var(--radius);padding:40px;box-shadow:var(--shadow);max-width:420px;width:100%;border:1px solid var(--border);}
+.login-card h2{text-align:center;font-size:1.6rem;font-weight:800;color:var(--primary);margin-bottom:6px;}
+.login-card p{text-align:center;color:var(--text3);margin-bottom:28px}
+.btn-login{width:100%;padding:13px;background:var(--primary);color:#fff;border-radius:var(--radius-sm);font-size:1rem;font-weight:700;transition:var(--transition);}
+.btn-login:hover{background:var(--primary-light);transform:translateY(-1px)}
+/* CONTACT */
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:1000px;margin:0 auto;padding:40px 20px;}
+@media(max-width:700px){.contact-layout{grid-template-columns:1fr}}
+.contact-info-card{background:var(--primary);color:#fff;border-radius:var(--radius);padding:32px;}
+.contact-info-card h2{font-size:1.4rem;font-weight:800;margin-bottom:12px}
+.contact-info-card p{opacity:0.85;margin-bottom:24px;font-size:0.9rem}
+.info-item{display:flex;align-items:flex-start;gap:12px;margin-bottom:16px;}
+.info-item i{font-size:1.1rem;color:var(--gold);margin-top:2px;flex-shrink:0}
+.info-item span{font-size:0.9rem;opacity:0.9}
+/* FAQ */
+.faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:8px;overflow:hidden;}
+.faq-q{padding:14px 16px;font-weight:600;font-size:0.9rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:var(--bg2);transition:var(--transition);}
+.faq-q:hover{background:var(--bg3)}
+.faq-q i{transition:var(--transition);flex-shrink:0}
+.faq-q.open i{transform:rotate(180deg)}
+.faq-a{display:none;padding:14px 16px;font-size:0.88rem;color:var(--text2);background:var(--bg3);line-height:1.7;}
+.faq-a.open{display:block}
+/* FOOTER */
+#footer{background:var(--primary);color:#fff;padding:40px 0 0;}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:28px;padding:0 20px 32px;max-width:1280px;margin:0 auto;}
+.footer-col h4{font-size:1rem;font-weight:700;color:var(--gold);margin-bottom:14px;}
+.footer-col p,.footer-col a{font-size:0.85rem;opacity:0.8;line-height:2;display:block;}
+.footer-col a:hover{opacity:1;color:var(--gold)}
+.social-links{display:flex;gap:10px;margin-top:12px}
+.social-links a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:1rem;transition:var(--transition);}
+.social-links a:hover{background:var(--gold);color:#fff}
+.newsletter-form{display:flex;gap:8px;margin-top:10px}
+.newsletter-form input{flex:1;padding:9px 12px;border-radius:var(--radius-sm);border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.1);color:#fff;font-size:0.85rem;}
+.newsletter-form input::placeholder{color:rgba(255,255,255,0.5)}
+.newsletter-form button{padding:9px 16px;background:var(--gold);color:#fff;border-radius:var(--radius-sm);font-weight:700;font-size:0.85rem;transition:var(--transition);}
+.footer-bottom{background:rgba(0,0,0,0.2);padding:14px 20px;text-align:center;font-size:0.82rem;opacity:0.7;}
+/* SCROLL TOP */
+#scroll-top{position:fixed;bottom:24px;left:24px;width:46px;height:46px;border-radius:50%;background:var(--primary);color:#fff;display:none;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:var(--shadow-hover);z-index:500;transition:var(--transition);}
+body.ltr #scroll-top{left:auto;right:24px}
+#scroll-top:hover{background:var(--gold);color:#fff;transform:translateY(-3px)}
+#scroll-top.show{display:flex}
+/* TOAST */
+#toast-container{position:fixed;bottom:24px;right:24px;z-index:3000;display:flex;flex-direction:column;gap:10px;max-width:350px;}
+body.ltr #toast-container{right:auto;left:24px}
+.toast{background:var(--bg2);border-radius:var(--radius-sm);padding:14px 16px;box-shadow:0 8px 30px rgba(0,0,0,0.2);border:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;animation:toastIn 0.3s ease;border-right:4px solid var(--primary);}
+body.ltr .toast{border-right:none;border-left:4px solid var(--primary)}
+.toast.success{border-right-color:#38A169}
+.toast.error{border-right-color:#E53E3E}
+.toast.warning{border-right-color:#D69E2E}
+.toast i{margin-top:2px;font-size:1rem}
+.toast.success i{color:#38A169}
+.toast.error i{color:#E53E3E}
+.toast.warning i{color:#D69E2E}
+.toast-text{font-size:0.88rem;color:var(--text)}
+@keyframes toastIn{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
+/* EMPTY STATE */
+.empty-state{text-align:center;padding:50px 20px;background:var(--bg2);border-radius:var(--radius);border:1px dashed var(--border);}
+.empty-state i{font-size:3rem;color:var(--text3);margin-bottom:12px}
+.empty-state h3{color:var(--text2);margin-bottom:8px}
+.empty-state p{color:var(--text3);font-size:0.88rem;margin-bottom:16px}
+/* HELPERS */
+.text-gold{color:var(--gold)}.text-primary{color:var(--primary)}.fw-700{font-weight:700}
+.btn-gold{background:var(--gold);color:#fff;padding:10px 22px;border-radius:var(--radius-sm);font-weight:700;font-size:0.9rem;transition:var(--transition);}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--primary);border:2px solid var(--primary);padding:10px 22px;border-radius:var(--radius-sm);font-weight:700;font-size:0.9rem;transition:var(--transition);}
+.btn-outline:hover{background:var(--primary);color:#fff}
+.banned-msg{background:rgba(229,62,62,0.1);border:1px solid #E53E3E;border-radius:var(--radius-sm);padding:14px;color:#E53E3E;font-size:0.9rem;margin-bottom:16px;}
+.phone-prompt{max-width:420px;margin:0 auto;padding:40px 20px;text-align:center;}
+.phone-prompt h2{font-size:1.4rem;font-weight:800;color:var(--primary);margin-bottom:8px}
+.phone-prompt p{color:var(--text3);margin-bottom:24px;font-size:0.9rem}
+.report-reasons{display:flex;flex-direction:column;gap:8px;margin:14px 0}
+.report-reasons label{display:flex;align-items:center;gap:8px;cursor:pointer;font-size:0.9rem;}
+@media(max-width:768px){.hero-content h1{font-size:1.8rem}.detail-layout{grid-template-columns:1fr}.admin-layout{grid-template-columns:1fr}.admin-sidebar{display:none}}
+@media(max-width:480px){#listings-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+@media print{#navbar,#footer,#scroll-top,.contact-btns,.share-btns,.detail-sidebar{display:none!important}.detail-layout{grid-template-columns:1fr}body{background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<!-- LOADING -->
+<div id="loading-overlay" class="hidden"><div class="spinner"></div></div>
+<div id="toast-container"></div>
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="showPage('home')">
+      <i class="fas fa-building"></i>
+      <div><div data-i18n="brand"></div><div style="font-size:0.65rem;font-weight:400;color:var(--text3)" data-i18n="brand_sub"></div></div>
+    </div>
+    <div class="nav-links" id="nav-links">
+      <a href="#" class="active" onclick="showPage('home');return false" data-i18n="nav_home"></a>
+      <a href="#" class="post-btn" onclick="showPage('add-listing');return false" data-i18n="nav_add"></a>
+      <a href="#" onclick="showPage('my-listings');return false" data-i18n="nav_my"></a>
+      <a href="#" onclick="showPage('favorites');return false" data-i18n="nav_fav"></a>
+      <a href="#" onclick="showPage('alerts');return false" data-i18n="nav_alerts"></a>
+      <a href="#" onclick="showPage('contact');return false" data-i18n="nav_contact"></a>
+      <a href="#" id="admin-link" onclick="showPage('admin');return false" style="display:none;color:#E53E3E">⚙ Admin</a>
+    </div>
+    <div class="nav-actions">
+      <button id="lang-btn" onclick="toggleLang()">AR</button>
+      <button id="theme-btn" onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HOME PAGE -->
+<div class="page active" id="page-home">
+  <section id="hero">
+    <div id="hero-bg"></div>
+    <div class="hero-content">
+      <h1 data-i18n="hero_title"></h1>
+      <p data-i18n="hero_sub"></p>
+      <div id="search-box">
+        <div class="search-row">
+          <div class="search-input-wrap">
+            <input type="text" id="main-search" data-i18n-ph="search_ph" oninput="showAutocomplete(this.value)" onkeydown="if(event.key==='Enter')doSearch()">
+            <div id="autocomplete-list" class="hidden"></div>
+          </div>
+          <button class="btn-filter" onclick="toggleFilters()"><i class="fas fa-sliders-h"></i> <span data-i18n="filter_btn"></span></button>
+          <button class="btn-search" onclick="doSearch()"><i class="fas fa-search"></i> <span data-i18n="search_btn"></span></button>
+        </div>
+        <div id="advanced-filters" class="hidden">
+          <div class="filter-group">
+            <label data-i18n="f_type"></label>
+            <div class="type-btns">
+              <button class="type-btn" onclick="setTransFilter('rent',this)" data-i18n="rent"></button>
+              <button class="type-btn" onclick="setTransFilter('sale',this)" data-i18n="sale"></button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <label data-i18n="f_proptype"></label>
+            <select id="f-proptype">
+              <option value="" data-i18n="all"></option>
+              <option value="apartment" data-i18n="apartment"></option>
+              <option value="house" data-i18n="house"></option>
+              <option value="villa" data-i18n="villa"></option>
+              <option value="land" data-i18n="land"></option>
+              <option value="commercial" data-i18n="commercial"></option>
+              <option value="factory" data-i18n="factory"></option>
+              <option value="clinic" data-i18n="clinic"></option>
+              <option value="school" data-i18n="school"></option>
+              <option value="office" data-i18n="office"></option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label data-i18n="f_wilaya"></label>
+            <select id="f-wilaya" onchange="populateBaladias('f-baladia',this.value)">
+              <option value="" data-i18n="all_wilayas"></option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label data-i18n="f_baladia"></label>
+            <select id="f-baladia"><option value="" data-i18n="all_baladias"></option></select>
+          </div>
+          <div class="filter-group"><label data-i18n="f_minprice"></label><input type="number" id="f-minprice" placeholder="0" min="0"></div>
+          <div class="filter-group"><label data-i18n="f_maxprice"></label><input type="number" id="f-maxprice" placeholder="∞" min="0"></div>
+          <div class="filter-group"><label data-i18n="f_minarea"></label><input type="number" id="f-minarea" placeholder="0" min="0"></div>
+          <div class="filter-group"><label data-i18n="f_maxarea"></label><input type="number" id="f-maxarea" placeholder="∞" min="0"></div>
+          <div class="filter-actions">
+            <button class="btn-reset" onclick="resetFilters()" data-i18n="reset"></button>
+            <button class="btn-search" onclick="doSearch()" data-i18n="search_btn"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item"><div class="num" id="stat-listings">0</div><div class="lbl" data-i18n="stat_listings"></div></div>
+      <div class="stat-item"><div class="num">58</div><div class="lbl" data-i18n="stat_wilayas"></div></div>
+      <div class="stat-item"><div class="num" id="stat-sellers">0</div><div class="lbl" data-i18n="stat_sellers"></div></div>
+      <div class="stat-item"><div class="num">100%</div><div class="lbl" data-i18n="stat_free"></div></div>
+    </div>
+  </div>
+  <section class="section container">
+    <div class="section-head">
+      <h2 class="section-title" id="results-title" data-i18n="latest_listings"></h2>
+      <div id="sort-bar">
+        <span id="results-count"></span>
+        <select id="sort-select" onchange="sortAndRender()">
+          <option value="newest" data-i18n="sort_newest"></option>
+          <option value="price_asc" data-i18n="sort_price_asc"></option>
+          <option value="price_desc" data-i18n="sort_price_desc"></option>
+          <option value="views" data-i18n="sort_views"></option>
+        </select>
+      </div>
+    </div>
+    <div id="listings-grid"></div>
+    <div id="no-results" class="hidden">
+      <i class="fas fa-search"></i>
+      <h3 data-i18n="no_results_title"></h3>
+      <p data-i18n="no_results_msg"></p>
+      <button class="btn-gold" style="margin-top:16px" onclick="showPage('add-listing')" data-i18n="add_title"></button>
+    </div>
+    <div id="pagination"></div>
+  </section>
+</div>
+
+<!-- ADD LISTING PAGE -->
+<div class="page" id="page-add-listing">
+  <div class="page-header">
+    <h1><i class="fas fa-plus-circle"></i> <span data-i18n="add_title"></span></h1>
+    <p data-i18n="add_sub"></p>
+  </div>
+  <div class="form-page">
+    <div id="banned-alert" class="banned-msg hidden"><i class="fas fa-ban"></i> <span data-i18n="banned_msg"></span></div>
+    <div class="form-card">
+      <div class="steps-nav">
+        <div class="step-tab active" id="stab-1">1. <span data-i18n="step1"></span></div>
+        <div class="step-tab" id="stab-2">2. <span data-i18n="step2"></span></div>
+        <div class="step-tab" id="stab-3">3. <span data-i18n="step3"></span></div>
+        <div class="step-tab" id="stab-4">4. <span data-i18n="step4"></span></div>
+        <div class="step-tab" id="stab-5">5. <span data-i18n="step5"></span></div>
+      </div>
+      <!-- STEP 1 -->
+      <div class="step-content active" id="step-1">
+        <h3 class="form-title" data-i18n="step1_title"></h3>
+        <p class="form-subtitle" data-i18n="step1_sub"></p>
+        <div class="form-group">
+          <label data-i18n="trans_type"></label>
+          <div class="type-btns" style="max-width:300px">
+            <button class="type-btn" id="s-rent" onclick="selectTrans('rent',this)" data-i18n="rent"></button>
+            <button class="type-btn" id="s-sale" onclick="selectTrans('sale',this)" data-i18n="sale"></button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label data-i18n="prop_type"></label>
+          <div class="type-grid" id="prop-type-grid"></div>
+        </div>
+        <div class="step-nav-btns"><div></div><button class="btn-next" onclick="nextStep(1)"><span data-i18n="next"></span> <i class="fas fa-arrow-left"></i></button></div>
+      </div>
+      <!-- STEP 2 -->
+      <div class="step-content" id="step-2">
+        <h3 class="form-title" data-i18n="step2_title"></h3>
+        <p class="form-subtitle" data-i18n="step2_sub"></p>
+        <div class="form-row">
+          <div class="form-group">
+            <label><span data-i18n="wilaya_lbl"></span> <span class="req">*</span></label>
+            <select id="s-wilaya" onchange="populateBaladias('s-baladia',this.value);showPriceSuggestion()">
+              <option value="" data-i18n="select_wilaya"></option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label><span data-i18n="baladia_lbl"></span> <span class="req">*</span></label>
+            <select id="s-baladia"><option value="" data-i18n="select_baladia"></option></select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label data-i18n="address_lbl"></label>
+          <input type="text" id="s-address" data-i18n-ph="address_ph">
+          <div class="input-hint" data-i18n="address_hint"></div>
+        </div>
+        <div class="step-nav-btns">
+          <button class="btn-prev" onclick="prevStep(2)"><i class="fas fa-arrow-right"></i> <span data-i18n="prev"></span></button>
+          <button class="btn-next" onclick="nextStep(2)"><span data-i18n="next"></span> <i class="fas fa-arrow-left"></i></button>
+        </div>
+      </div>
+      <!-- STEP 3 -->
+      <div class="step-content" id="step-3">
+        <h3 class="form-title" data-i18n="step3_title"></h3>
+        <p class="form-subtitle" data-i18n="step3_sub"></p>
+        <div class="form-row">
+          <div class="form-group">
+            <label><span data-i18n="price_lbl"></span> <span class="req">*</span></label>
+            <input type="number" id="s-price" placeholder="0" min="0" oninput="showPriceSuggestion()">
+            <div id="price-suggestion" class="hidden"></div>
+          </div>
+          <div class="form-group">
+            <label><span data-i18n="area_lbl"></span> <span class="req">*</span></label>
+            <input type="number" id="s-area" placeholder="0" min="0">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group" id="rooms-group">
+            <label data-i18n="rooms_lbl"></label>
+            <select id="s-rooms"><option value="">-</option><option>Studio</option><option>F2</option><option>F3</option><option>F4</option><option>F5+</option></select>
+          </div>
+          <div class="form-group" id="floor-group">
+            <label data-i18n="floor_lbl"></label>
+            <input type="number" id="s-floor" placeholder="0" min="0">
+          </div>
+        </div>
+        <div class="form-group">
+          <label><span data-i18n="desc_lbl"></span> <span class="req">*</span></label>
+          <textarea id="s-desc" rows="5" oninput="updateCharCount(this)"></textarea>
+          <div id="char-count-s-desc" class="char-count">0/1000</div>
+        </div>
+        <div class="form-group">
+          <label data-i18n="images_lbl"></label>
+          <input type="file" id="s-images" accept="image/*" multiple onchange="handleImages(this)" style="display:none">
+          <button type="button" onclick="document.getElementById('s-images').click()" class="btn-outline">
+            <i class="fas fa-camera"></i> <span data-i18n="upload_img"></span>
+          </button>
+          <div class="input-hint" data-i18n="img_hint"></div>
+          <div id="image-preview"></div>
+        </div>
+        <div class="step-nav-btns">
+          <button class="btn-prev" onclick="prevStep(3)"><i class="fas fa-arrow-right"></i> <span data-i18n="prev"></span></button>
+          <button class="btn-next" onclick="nextStep(3)"><span data-i18n="next"></span> <i class="fas fa-arrow-left"></i></button>
+        </div>
+      </div>
+      <!-- STEP 4 -->
+      <div class="step-content" id="step-4">
+        <h3 class="form-title" data-i18n="step4_title"></h3>
+        <p class="form-subtitle" data-i18n="step4_sub"></p>
+        <div class="form-group">
+          <label><span data-i18n="name_lbl"></span> <span class="req">*</span></label>
+          <input type="text" id="s-name" data-i18n-ph="name_ph">
+        </div>
+        <div class="form-group">
+          <label><span data-i18n="phone_lbl"></span> <span class="req">*</span></label>
+          <input type="tel" id="s-phone" placeholder="0XXXXXXXXX">
+          <div class="input-hint" data-i18n="phone_hint"></div>
+        </div>
+        <div class="form-group">
+          <label data-i18n="email_lbl"></label>
+          <input type="email" id="s-email" placeholder="example@email.com">
+        </div>
+        <div class="step-nav-btns">
+          <button class="btn-prev" onclick="prevStep(4)"><i class="fas fa-arrow-right"></i> <span data-i18n="prev"></span></button>
+          <button class="btn-next" onclick="nextStep(4)"><span data-i18n="next"></span> <i class="fas fa-arrow-left"></i></button>
+        </div>
+      </div>
+      <!-- STEP 5 -->
+      <div class="step-content" id="step-5">
+        <h3 class="form-title" data-i18n="step5_title"></h3>
+        <p class="form-subtitle" data-i18n="step5_sub"></p>
+        <div id="pricing-info">
+          <div class="pricing-row"><span class="price-label" data-i18n="std_listing"></span><span class="price-value">200 DZD</span></div>
+          <div class="pricing-row"><span class="price-label" data-i18n="duration_std"></span><span class="price-value" data-i18n="days30"></span></div>
+        </div>
+        <div class="vip-toggle" onclick="toggleVIP()">
+          <input type="checkbox" id="vip-check">
+          <label for="vip-check"><strong><i class="fas fa-crown" style="color:var(--gold)"></i> <span data-i18n="vip_opt"></span></strong><br><small data-i18n="vip_desc"></small></label>
+          <span class="vip-price">+800 DZD</span>
+        </div>
+        <div style="font-size:1.2rem;font-weight:800;color:var(--primary);margin-bottom:20px">
+          <span data-i18n="total"></span>: <span id="total-amount">200</span> DZD
+        </div>
+        <div class="form-group">
+          <label data-i18n="pay_method"></label>
+          <div class="pay-methods">
+            <button class="pay-method-btn" onclick="startPayment('Baridimob')"><i class="fas fa-university"></i><span>Baridimob</span></button>
+            <button class="pay-method-btn" onclick="startPayment('CIB')"><i class="fas fa-credit-card"></i><span>CIB</span></button>
+            <button class="pay-method-btn" onclick="startPayment('Ooredoo Money')"><i class="fas fa-mobile-alt"></i><span>Ooredoo Money</span></button>
+          </div>
+        </div>
+        <div class="step-nav-btns">
+          <button class="btn-prev" onclick="prevStep(5)"><i class="fas fa-arrow-right"></i> <span data-i18n="prev"></span></button>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MY LISTINGS PAGE -->
+<div class="page" id="page-my-listings">
+  <div class="page-header">
+    <h1><i class="fas fa-list-ul"></i> <span data-i18n="my_listings_title"></span></h1>
+    <p data-i18n="my_listings_sub"></p>
+  </div>
+  <div class="container" style="padding-top:32px">
+    <div id="seller-prompt" class="hidden">
+      <div class="phone-prompt">
+        <h2 data-i18n="phone_prompt_title"></h2>
+        <p data-i18n="phone_prompt_sub"></p>
+        <div class="form-group" style="max-width:300px;margin:0 auto 16px">
+          <input type="tel" id="seller-phone-input" placeholder="0XXXXXXXXX">
+        </div>
+        <button class="btn-gold" onclick="setSellerPhone()" data-i18n="enter_phone"></button>
+      </div>
+    </div>
+    <div id="my-listings-content" class="hidden">
+      <div class="stats-cards" id="my-stats-cards"></div>
+      <div class="section-head">
+        <h2 class="section-title" data-i18n="my_listings_title"></h2>
+        <button class="btn-gold" onclick="showPage('add-listing')"><i class="fas fa-plus"></i> <span data-i18n="add_title"></span></button>
+      </div>
+      <div class="listings-table-wrap">
+        <table class="listings-table">
+          <thead><tr>
+            <th data-i18n="th_img"></th><th data-i18n="th_type"></th><th data-i18n="th_loc"></th>
+            <th data-i18n="th_price"></th><th data-i18n="th_views"></th><th data-i18n="th_status"></th>
+            <th data-i18n="th_date"></th><th data-i18n="th_actions"></th>
+          </tr></thead>
+          <tbody id="my-listings-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DETAIL PAGE -->
+<div class="page" id="page-detail">
+  <div class="detail-layout">
+    <div class="detail-main">
+      <div id="detail-gallery">
+        <img id="main-img" src="" alt="">
+        <div class="gallery-thumbs" id="gallery-thumbs"></div>
+      </div>
+      <div class="detail-section">
+        <h3><i class="fas fa-info-circle"></i> <span data-i18n="details_title"></span></h3>
+        <div class="detail-attrs" id="detail-attrs"></div>
+      </div>
+      <div class="detail-section">
+        <h3><i class="fas fa-align-left"></i> <span data-i18n="description"></span></h3>
+        <p id="detail-desc" style="font-size:0.9rem;color:var(--text2);line-height:1.8"></p>
+      </div>
+      <div class="detail-section">
+        <h3><i class="fas fa-map-marker-alt"></i> <span data-i18n="map_section"></span></h3>
+        <div id="map-placeholder" style="background:var(--bg3);border-radius:var(--radius-sm);height:240px;display:flex;align-items:center;justify-content:center">
+          <div style="text-align:center;color:var(--text3)"><i class="fas fa-map" style="font-size:3rem;margin-bottom:8px;display:block"></i><span data-i18n="map_note"></span></div>
+        </div>
+      </div>
+      <div class="detail-section">
+        <h3><i class="fas fa-qrcode"></i> <span data-i18n="qr_title"></span></h3>
+        <p style="font-size:0.85rem;color:var(--text3);margin-bottom:10px" data-i18n="qr_desc"></p>
+        <div id="qrcode"></div>
+        <button class="btn-outline" style="margin-top:12px" onclick="downloadQR()"><i class="fas fa-download"></i> <span data-i18n="download_qr"></span></button>
+      </div>
+      <div class="detail-section">
+        <h3><i class="fas fa-flag"></i> <span data-i18n="report_title"></span></h3>
+        <button class="btn-sm btn-delete" onclick="openReportModal()"><i class="fas fa-flag"></i> <span data-i18n="report_btn"></span></button>
+      </div>
+      <div class="detail-section">
+        <h3><i class="fas fa-th"></i> <span data-i18n="similar_title"></span></h3>
+        <div class="similar-grid" id="similar-grid"></div>
+      </div>
+    </div>
+    <div class="detail-sidebar">
+      <div class="contact-card">
+        <span id="detail-badge" class="card-badge" style="position:static;display:inline-block;margin-bottom:8px"></span>
+        <h2 id="detail-title" style="font-size:1.2rem;font-weight:800;color:var(--primary);margin-bottom:4px"></h2>
+        <div id="detail-price" style="font-size:1.6rem;font-weight:800;color:var(--gold);margin:4px 0"></div>
+        <div id="detail-location" style="font-size:0.88rem;color:var(--text3);margin-bottom:14px"></div>
+        <div class="seller-info">
+          <div class="seller-avatar" id="seller-avatar"></div>
+          <div><div class="seller-name" id="seller-name"></div><div class="seller-joined" id="seller-joined"></div></div>
+        </div>
+        <div id="phone-reveal" onclick="revealPhone()"><i class="fas fa-eye"></i> <span data-i18n="click_phone"></span></div>
+        <div class="contact-btns">
+          <button class="btn-call hidden" id="btn-call" onclick="callSeller()"><i class="fas fa-phone"></i> <span data-i18n="call_btn"></span></button>
+          <button class="btn-wa" onclick="whatsappSeller()"><i class="fab fa-whatsapp"></i> <span data-i18n="wa_btn"></span></button>
+          <button class="btn-msg" onclick="openMsgModal()"><i class="fas fa-envelope"></i> <span data-i18n="msg_btn"></span></button>
+        </div>
+      </div>
+      <div class="detail-section">
+        <h3><i class="fas fa-share-alt"></i> <span data-i18n="share_title"></span></h3>
+        <div class="share-btns">
+          <button class="share-btn" onclick="shareFacebook()" style="color:#1877F2"><i class="fab fa-facebook"></i> Facebook</button>
+          <button class="share-btn" onclick="shareWhatsApp()" style="color:#25D366"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+          <button class="share-btn" onclick="copyLink()"><i class="fas fa-link"></i> <span data-i18n="copy_link"></span></button>
+          <button class="share-btn" onclick="window.print()"><i class="fas fa-print"></i> <span data-i18n="print_btn"></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAVORITES PAGE -->
+<div class="page" id="page-favorites">
+  <div class="page-header"><h1><i class="fas fa-heart"></i> <span data-i18n="fav_title"></span></h1><p data-i18n="fav_sub"></p></div>
+  <div class="container" style="padding-top:32px">
+    <div id="fav-grid" class="fav-grid"></div>
+    <div id="fav-empty" class="empty-state hidden">
+      <i class="fas fa-heart-broken"></i><h3 data-i18n="fav_empty_title"></h3><p data-i18n="fav_empty_sub"></p>
+      <button class="btn-gold" onclick="showPage('home')" data-i18n="browse_listings"></button>
+    </div>
+  </div>
+</div>
+
+<!-- ALERTS PAGE -->
+<div class="page" id="page-alerts">
+  <div class="page-header"><h1><i class="fas fa-bell"></i> <span data-i18n="alerts_title"></span></h1><p data-i18n="alerts_sub"></p></div>
+  <div class="alerts-section">
+    <div class="form-card" style="margin-bottom:24px">
+      <h3 class="form-title" style="font-size:1.2rem" data-i18n="new_alert"></h3>
+      <div class="form-group"><label data-i18n="alert_name"></label><input type="text" id="a-name" data-i18n-ph="alert_name_ph"></div>
+      <div class="form-row">
+        <div class="form-group">
+          <label data-i18n="f_wilaya"></label>
+          <select id="a-wilaya"><option value="" data-i18n="all_wilayas"></option></select>
+        </div>
+        <div class="form-group">
+          <label data-i18n="f_proptype"></label>
+          <select id="a-proptype">
+            <option value="" data-i18n="all"></option>
+            <option value="apartment" data-i18n="apartment"></option>
+            <option value="house" data-i18n="house"></option>
+            <option value="villa" data-i18n="villa"></option>
+            <option value="land" data-i18n="land"></option>
+            <option value="commercial" data-i18n="commercial"></option>
+            <option value="office" data-i18n="office"></option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label data-i18n="f_type"></label>
+          <select id="a-trans"><option value="" data-i18n="all"></option><option value="rent" data-i18n="rent"></option><option value="sale" data-i18n="sale"></option></select>
+        </div>
+        <div class="form-group"><label data-i18n="f_maxprice"></label><input type="number" id="a-maxprice" placeholder="0" min="0"></div>
+      </div>
+      <div class="form-group"><label data-i18n="keyword_lbl"></label><input type="text" id="a-keyword" data-i18n-ph="keyword_ph"></div>
+      <button class="btn-gold" onclick="saveAlert()"><i class="fas fa-bell"></i> <span data-i18n="save_alert"></span></button>
+    </div>
+    <h3 class="section-title" style="margin-bottom:16px" data-i18n="my_alerts"></h3>
+    <div id="alerts-list"></div>
+    <div id="alerts-empty" class="empty-state hidden">
+      <i class="fas fa-bell-slash"></i><h3 data-i18n="no_alerts"></h3><p data-i18n="no_alerts_sub"></p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT PAGE -->
+<div class="page" id="page-contact">
+  <div class="contact-layout">
+    <div class="contact-info-card">
+      <h2 data-i18n="contact_title"></h2>
+      <p data-i18n="contact_sub"></p>
+      <div class="info-item"><i class="fas fa-map-marker-alt"></i><span>Alger, Algérie</span></div>
+      <div class="info-item"><i class="fas fa-envelope"></i><span>contact@dzrealestate.dz</span></div>
+      <div class="info-item"><i class="fas fa-phone"></i><span>+213 555 000 000</span></div>
+      <div class="info-item"><i class="fab fa-whatsapp"></i><span>WhatsApp: +213 555 000 000</span></div>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div>
+      <div class="form-card" style="margin-bottom:24px">
+        <h3 class="form-title" style="font-size:1.2rem" data-i18n="send_msg"></h3>
+        <div class="form-group"><label data-i18n="name_lbl"></label><input type="text" id="c-name"></div>
+        <div class="form-group"><label data-i18n="email_lbl"></label><input type="email" id="c-email"></div>
+        <div class="form-group"><label data-i18n="message_lbl"></label><textarea id="c-msg" rows="5"></textarea></div>
+        <button class="btn-gold" onclick="submitContact()"><i class="fas fa-paper-plane"></i> <span data-i18n="send_btn"></span></button>
+      </div>
+      <div class="form-card">
+        <h3 class="form-title" style="font-size:1.2rem">FAQ</h3>
+        <div id="faq-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN PAGE -->
+<div class="page" id="page-admin">
+  <div id="admin-login">
+    <div class="login-card">
+      <h2>⚙</h2><h2 data-i18n="admin_title"></h2><p data-i18n="admin_sub"></p>
+      <div class="form-group"><label data-i18n="username_lbl"></label><input type="text" id="a-user" placeholder="admin"></div>
+      <div class="form-group"><label data-i18n="password_lbl"></label><input type="password" id="a-pass" placeholder="••••••••" onkeydown="if(event.key==='Enter')adminLogin()"></div>
+      <div id="login-error" class="hidden" style="color:#E53E3E;font-size:0.85rem;margin-bottom:12px" data-i18n="login_error"></div>
+      <button class="btn-login" onclick="adminLogin()"><i class="fas fa-sign-in-alt"></i> <span data-i18n="login_btn"></span></button>
+    </div>
+  </div>
+  <div id="admin-dashboard" class="hidden">
+    <div class="admin-layout">
+      <div class="admin-sidebar">
+        <h3>ADMIN PANEL</h3>
+        <nav class="admin-nav">
+          <a onclick="showAdminSection('dashboard',this)" class="active"><i class="fas fa-tachometer-alt"></i> <span data-i18n="a_dashboard"></span></a>
+          <a onclick="showAdminSection('listings',this)"><i class="fas fa-home"></i> <span data-i18n="a_listings"></span></a>
+          <a onclick="showAdminSection('transactions',this)"><i class="fas fa-receipt"></i> <span data-i18n="a_trans"></span></a>
+          <a onclick="showAdminSection('reports',this)"><i class="fas fa-flag"></i> <span data-i18n="a_reports"></span></a>
+          <a onclick="showAdminSection('users',this)"><i class="fas fa-users"></i> <span data-i18n="a_users"></span></a>
+          <a onclick="exportCSV()"><i class="fas fa-file-csv"></i> <span data-i18n="a_export"></span></a>
+          <a onclick="adminLogout()" style="color:rgba(255,150,150,0.9)"><i class="fas fa-sign-out-alt"></i> <span data-i18n="a_logout"></span></a>
+        </nav>
+      </div>
+      <div class="admin-content">
+        <div class="admin-section active" id="admin-dashboard-section">
+          <h2 class="section-title" style="margin-bottom:20px" data-i18n="a_dashboard"></h2>
+          <div class="admin-stat-grid" id="admin-stats"></div>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>ID</th><th data-i18n="th_type"></th><th data-i18n="th_loc"></th><th data-i18n="th_price"></th><th data-i18n="th_status"></th><th data-i18n="th_date"></th></tr></thead>
+              <tbody id="recent-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="admin-section" id="admin-listings-section">
+          <h2 class="section-title" style="margin-bottom:20px" data-i18n="a_listings"></h2>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>ID</th><th data-i18n="th_type"></th><th data-i18n="th_loc"></th><th data-i18n="th_price"></th><th>VIP</th><th data-i18n="th_status"></th><th data-i18n="th_actions"></th></tr></thead>
+              <tbody id="admin-listings-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="admin-section" id="admin-transactions-section">
+          <h2 class="section-title" style="margin-bottom:20px" data-i18n="a_trans"></h2>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>ID</th><th>Listing</th><th>Montant</th><th>Méthode</th><th>Date</th><th>Statut</th></tr></thead>
+              <tbody id="admin-trans-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="admin-section" id="admin-reports-section">
+          <h2 class="section-title" style="margin-bottom:20px" data-i18n="a_reports"></h2>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>ID</th><th>Listing</th><th>Raison</th><th>Date</th><th>Actions</th></tr></thead>
+              <tbody id="admin-reports-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="admin-section" id="admin-users-section">
+          <h2 class="section-title" style="margin-bottom:20px" data-i18n="a_users"></h2>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>Téléphone</th><th>Nom</th><th>Annonces</th><th>Statut</th><th>Actions</th></tr></thead>
+              <tbody id="admin-users-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODALS -->
+<div class="modal-overlay hidden" id="payment-modal">
+  <div class="modal-box" style="max-width:420px">
+    <button class="modal-close" onclick="closeModal('payment-modal')"><i class="fas fa-times"></i></button>
+    <div id="pay-content"></div>
+  </div>
+</div>
+<div class="modal-overlay hidden" id="msg-modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('msg-modal')"><i class="fas fa-times"></i></button>
+    <h2 data-i18n="msg_modal_title"></h2><p data-i18n="msg_modal_sub"></p>
+    <div class="form-group"><label data-i18n="name_lbl"></label><input type="text" id="m-name"></div>
+    <div class="form-group"><label data-i18n="phone_lbl"></label><input type="tel" id="m-phone" placeholder="0XXXXXXXXX"></div>
+    <div class="form-group"><label data-i18n="message_lbl"></label><textarea id="m-msg" rows="4"></textarea></div>
+    <button class="btn-gold" onclick="sendInquiry()" style="width:100%"><i class="fas fa-paper-plane"></i> <span data-i18n="send_btn"></span></button>
+  </div>
+</div>
+<div class="modal-overlay hidden" id="report-modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('report-modal')"><i class="fas fa-times"></i></button>
+    <h2 data-i18n="report_modal_title"></h2><p data-i18n="report_modal_sub"></p>
+    <div class="report-reasons" id="report-reasons"></div>
+    <div class="form-group"><textarea id="report-details" rows="3" data-i18n-ph="report_details_ph"></textarea></div>
+    <button class="btn-delete" style="width:100%;padding:12px;border-radius:var(--radius-sm);font-size:1rem" onclick="submitReport()"><i class="fas fa-flag"></i> <span data-i18n="report_submit"></span></button>
+  </div>
+</div>
+<div class="modal-overlay hidden" id="edit-modal">
+  <div class="modal-box" style="max-width:600px">
+    <button class="modal-close" onclick="closeModal('edit-modal')"><i class="fas fa-times"></i></button>
+    <h2 data-i18n="edit_listing"></h2>
+    <div id="edit-form-content"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4><i class="fas fa-building"></i> عقارات الجزائر</h4>
+      <p data-i18n="footer_about"></p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_links"></h4>
+      <a href="#" onclick="showPage('home');return false" data-i18n="nav_home"></a>
+      <a href="#" onclick="showPage('add-listing');return false" data-i18n="nav_add"></a>
+      <a href="#" onclick="showPage('contact');return false" data-i18n="nav_contact"></a>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer_types"></h4>
+      <a href="#" onclick="filterByType('apartment');return false" data-i18n="apartment"></a>
+      <a href="#" onclick="filterByType('villa');return false" data-i18n="villa"></a>
+      <a href="#" onclick="filterByType('land');return false" data-i18n="land"></a>
+      <a href="#" onclick="filterByType('commercial');return false" data-i18n="commercial"></a>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="newsletter_title"></h4>
+      <p data-i18n="newsletter_sub"></p>
+      <div class="newsletter-form">
+        <input type="email" id="newsletter-email" data-i18n-ph="newsletter_ph">
+        <button onclick="subscribeNewsletter()" data-i18n="subscribe_btn"></button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© <span id="current-year"></span> عقارات الجزائر | DZ Real Estate. <span data-i18n="all_rights"></span></div>
+</footer>
+<script>
+// ===== TRANSLATIONS =====
+const T={ar:{brand:'عقارات الجزائر',brand_sub:'DZ Real Estate',nav_home:'الرئيسية',nav_add:'أضف إعلان',nav_my:'إعلاناتي',nav_fav:'المفضلة',nav_alerts:'تنبيهات',nav_contact:'اتصل بنا',hero_title:'🏡 ابحث عن عقارك المثالي في الجزائر',hero_sub:'أكبر منصة عقارية — شقق، فلل، أراضي، محلات تجارية وأكثر',search_ph:'ابحث بالمدينة أو الحي... (حيدرة، بن عكنون، وهران...)',search_btn:'بحث',filter_btn:'تصفية',f_type:'نوع العملية',f_proptype:'نوع العقار',f_wilaya:'الولاية',f_baladia:'البلدية',f_minprice:'أقل سعر (دج)',f_maxprice:'أعلى سعر (دج)',f_minarea:'أصغر مساحة (م²)',f_maxarea:'أكبر مساحة (م²)',all:'الكل',all_wilayas:'كل الولايات',all_baladias:'كل البلديات',rent:'إيجار',sale:'بيع',apartment:'شقة',house:'منزل',villa:'فيلا',land:'أرض',commercial:'محل تجاري',factory:'مستودع/مصنع',clinic:'عيادة/مستشفى',school:'مدرسة خاصة',office:'مكتب',reset:'إعادة تعيين',stat_listings:'إعلان نشط',stat_wilayas:'ولاية مغطاة',stat_sellers:'بائع مسجل',stat_free:'بحث مجاني',latest_listings:'أحدث العقارات',sort_newest:'الأحدث أولاً',sort_price_asc:'الأرخص أولاً',sort_price_desc:'الأغلى أولاً',sort_views:'الأكثر مشاهدة',no_results_title:'لا توجد نتائج',no_results_msg:'حاول تعديل معايير البحث',add_title:'أضف إعلاناً',add_sub:'انشر عقارك وابدأ البيع أو الإيجار',step1:'النوع',step2:'الموقع',step3:'التفاصيل',step4:'التواصل',step5:'الدفع',step1_title:'اختر نوع الإعلان',step1_sub:'حدد نوع العملية ونوع العقار',step2_title:'حدد الموقع',step2_sub:'أدخل الولاية والبلدية',step3_title:'تفاصيل العقار',step3_sub:'السعر والمساحة والوصف',step4_title:'معلومات التواصل',step4_sub:'معلوماتك للتواصل مع المشترين',step5_title:'الدفع والنشر',step5_sub:'ادفع لتفعيل إعلانك',trans_type:'نوع العملية *',prop_type:'نوع العقار *',wilaya_lbl:'الولاية',baladia_lbl:'البلدية',select_wilaya:'-- اختر الولاية --',select_baladia:'-- اختر البلدية --',address_lbl:'العنوان',address_ph:'الشارع، الحي...',address_hint:'اختياري',price_lbl:'السعر (دج)',area_lbl:'المساحة (م²)',rooms_lbl:'عدد الغرف',floor_lbl:'الطابق',desc_lbl:'الوصف',images_lbl:'الصور',upload_img:'رفع الصور',img_hint:'حتى 5 صور، 2 ميجا كحد أقصى',name_lbl:'الاسم الكامل',name_ph:'اسمك...',phone_lbl:'رقم الهاتف',phone_hint:'رقم جزائري يبدأ بـ 05، 06 أو 07',email_lbl:'البريد الإلكتروني (اختياري)',std_listing:'إعلان عادي (30 يوم)',vip_opt:'إعلان VIP مميز',vip_desc:'يظهر في المقدمة - 60 يوماً - خلفية ذهبية',duration_std:'مدة الإعلان',days30:'30 يوم',total:'المجموع',pay_method:'طريقة الدفع',prev:'السابق',next:'التالي',my_listings_title:'إعلاناتي',my_listings_sub:'إدارة إعلاناتك العقارية',phone_prompt_title:'أدخل رقم هاتفك',phone_prompt_sub:'لعرض إعلاناتك الشخصية',enter_phone:'عرض إعلاناتي',th_img:'الصورة',th_type:'النوع',th_loc:'الموقع',th_price:'السعر',th_views:'المشاهدات',th_status:'الحالة',th_date:'التاريخ',th_actions:'الإجراءات',details_title:'تفاصيل العقار',description:'الوصف',map_section:'الموقع على الخريطة',map_note:'الخريطة ستظهر هنا',qr_title:'رمز QR',qr_desc:'امسح الرمز لمشاركة الإعلان',download_qr:'تحميل QR',report_title:'تبليغ عن مخالفة',report_btn:'إبلاغ',similar_title:'عقارات مشابهة',click_phone:'انقر لإظهار رقم الهاتف',call_btn:'اتصل الآن',wa_btn:'واتساب',msg_btn:'إرسال رسالة',share_title:'مشاركة',copy_link:'نسخ الرابط',print_btn:'طباعة',fav_title:'المفضلة',fav_sub:'العقارات المحفوظة',fav_empty_title:'لا توجد عقارات محفوظة',fav_empty_sub:'أضف عقارات بالنقر على ❤',browse_listings:'تصفح العقارات',alerts_title:'التنبيهات',alerts_sub:'تنبيهات العقارات الجديدة',new_alert:'إنشاء تنبيه جديد',alert_name:'اسم التنبيه',alert_name_ph:'مثال: شقة للإيجار في الجزائر',keyword_lbl:'كلمة مفتاحية',keyword_ph:'مثال: دالي براهيم',save_alert:'حفظ التنبيه',my_alerts:'تنبيهاتي',no_alerts:'لا توجد تنبيهات',no_alerts_sub:'أنشئ تنبيهاً لتلقي إشعارات',contact_title:'تواصل معنا',contact_sub:'نحن هنا للمساعدة',send_msg:'أرسل رسالة',message_lbl:'الرسالة',send_btn:'إرسال',admin_title:'لوحة الإدارة',admin_sub:'أدخل بيانات المدير',username_lbl:'اسم المستخدم',password_lbl:'كلمة المرور',login_btn:'دخول',login_error:'بيانات خاطئة',a_dashboard:'الرئيسية',a_listings:'الإعلانات',a_trans:'المدفوعات',a_reports:'البلاغات',a_users:'المستخدمون',a_export:'تصدير CSV',a_logout:'خروج',msg_modal_title:'إرسال رسالة للبائع',msg_modal_sub:'سيتواصل معك البائع قريباً',report_modal_title:'تبليغ عن إعلان',report_modal_sub:'اختر سبب التبليغ',report_details_ph:'تفاصيل إضافية...',report_submit:'إرسال البلاغ',edit_listing:'تعديل الإعلان',footer_about:'أكبر منصة عقارية في الجزائر',footer_links:'روابط سريعة',footer_types:'أنواع العقارات',newsletter_title:'النشرة البريدية',newsletter_sub:'اشترك لأحدث العروض',newsletter_ph:'بريدك الإلكتروني...',subscribe_btn:'اشتراك',all_rights:'جميع الحقوق محفوظة',banned_msg:'تم حظر حسابك. تواصل مع الإدارة.',price_sug:'متوسط السعر في هذه المنطقة',posted:'نشر في'},fr:{brand:'DZ Real Estate',brand_sub:'عقارات الجزائر',nav_home:'Accueil',nav_add:'Publier',nav_my:'Mes annonces',nav_fav:'Favoris',nav_alerts:'Alertes',nav_contact:'Contact',hero_title:'🏡 Trouvez votre bien immobilier en Algérie',hero_sub:'La plus grande plateforme — appartements, villas, terrains, locaux commerciaux',search_ph:'Rechercher par ville, quartier... (Hydra, Chéraga, Oran...)',search_btn:'Rechercher',filter_btn:'Filtres',f_type:'Type opération',f_proptype:'Type bien',f_wilaya:'Wilaya',f_baladia:'Commune',f_minprice:'Prix min (DZD)',f_maxprice:'Prix max (DZD)',f_minarea:'Surface min (m²)',f_maxarea:'Surface max (m²)',all:'Tous',all_wilayas:'Toutes wilayas',all_baladias:'Toutes communes',rent:'Location',sale:'Vente',apartment:'Appartement',house:'Maison',villa:'Villa',land:'Terrain',commercial:'Local commercial',factory:'Entrepôt/Usine',clinic:'Clinique/Hôpital',school:'École privée',office:'Bureau',reset:'Réinitialiser',stat_listings:'Annonces actives',stat_wilayas:'Wilayas couvertes',stat_sellers:'Vendeurs inscrits',stat_free:'Recherche gratuite',latest_listings:'Dernières annonces',sort_newest:'Plus récent',sort_price_asc:'Prix croissant',sort_price_desc:'Prix décroissant',sort_views:'Plus vus',no_results_title:'Aucun résultat',no_results_msg:'Modifiez vos critères de recherche',add_title:'Publier une annonce',add_sub:'Publiez votre bien et commencez à vendre ou louer',step1:'Type',step2:'Localisation',step3:'Détails',step4:'Contact',step5:'Paiement',step1_title:"Type d'annonce",step1_sub:'Sélectionnez le type et la catégorie',step2_title:'Localisation',step2_sub:'Wilaya, commune et adresse',step3_title:'Détails du bien',step3_sub:'Prix, surface, description',step4_title:'Coordonnées',step4_sub:'Vos informations de contact',step5_title:'Paiement & Publication',step5_sub:'Payez pour activer votre annonce',trans_type:'Type opération *',prop_type:'Type de bien *',wilaya_lbl:'Wilaya',baladia_lbl:'Commune',select_wilaya:'-- Choisir wilaya --',select_baladia:'-- Choisir commune --',address_lbl:'Adresse',address_ph:'Rue, quartier...',address_hint:'Optionnel',price_lbl:'Prix (DZD)',area_lbl:'Surface (m²)',rooms_lbl:'Nombre de pièces',floor_lbl:'Étage',desc_lbl:'Description',images_lbl:'Photos',upload_img:'Ajouter des photos',img_hint:"Jusqu'à 5 photos, max 2 Mo",name_lbl:'Nom complet',name_ph:'Votre nom...',phone_lbl:'Téléphone',phone_hint:'Numéro algérien (05, 06 ou 07)',email_lbl:'E-mail (optionnel)',std_listing:'Annonce standard (30 jours)',vip_opt:'Annonce VIP Premium',vip_desc:'En tête de liste — 60 jours — fond doré',duration_std:'Durée',days30:'30 jours',total:'Total',pay_method:'Mode de paiement',prev:'Précédent',next:'Suivant',my_listings_title:'Mes annonces',my_listings_sub:'Gérez vos annonces immobilières',phone_prompt_title:'Entrez votre numéro',phone_prompt_sub:'Pour afficher vos annonces',enter_phone:'Voir mes annonces',th_img:'Photo',th_type:'Type',th_loc:'Lieu',th_price:'Prix',th_views:'Vues',th_status:'Statut',th_date:'Date',th_actions:'Actions',details_title:'Détails',description:'Description',map_section:'Carte',map_note:'La carte sera affichée ici',qr_title:'Code QR',qr_desc:'Scannez pour partager',download_qr:'Télécharger QR',report_title:'Signaler',report_btn:'Signaler',similar_title:'Biens similaires',click_phone:'Cliquer pour voir le numéro',call_btn:'Appeler',wa_btn:'WhatsApp',msg_btn:'Envoyer message',share_title:'Partager',copy_link:'Copier lien',print_btn:'Imprimer',fav_title:'Favoris',fav_sub:'Vos biens favoris',fav_empty_title:'Aucun favori',fav_empty_sub:'Ajoutez des biens en cliquant ❤',browse_listings:'Parcourir',alerts_title:'Alertes',alerts_sub:'Recevez des alertes',new_alert:'Créer alerte',alert_name:"Nom de l'alerte",alert_name_ph:'Ex: Appartement à Alger',keyword_lbl:'Mot-clé',keyword_ph:'Ex: Chéraga',save_alert:"Enregistrer l'alerte",my_alerts:'Mes alertes',no_alerts:'Aucune alerte',no_alerts_sub:'Créez une alerte pour recevoir des notifications',contact_title:'Contactez-nous',contact_sub:'Nous sommes là pour vous aider',send_msg:'Envoyez-nous un message',message_lbl:'Message',send_btn:'Envoyer',admin_title:'Panneau Admin',admin_sub:'Entrez vos identifiants',username_lbl:"Nom d'utilisateur",password_lbl:'Mot de passe',login_btn:'Connexion',login_error:'Identifiants incorrects',a_dashboard:'Tableau de bord',a_listings:'Annonces',a_trans:'Paiements',a_reports:'Signalements',a_users:'Utilisateurs',a_export:'Exporter CSV',a_logout:'Déconnexion',msg_modal_title:'Envoyer un message',msg_modal_sub:'Le vendeur vous contactera bientôt',report_modal_title:"Signaler l'annonce",report_modal_sub:'Choisissez la raison',report_details_ph:'Détails supplémentaires...',report_submit:'Envoyer le signalement',edit_listing:"Modifier l'annonce",footer_about:'La plus grande plateforme immobilière en Algérie',footer_links:'Liens rapides',footer_types:'Catégories',newsletter_title:'Newsletter',newsletter_sub:'Abonnez-vous pour les offres',newsletter_ph:'Votre e-mail...',subscribe_btn:"S'abonner",all_rights:'Tous droits réservés',banned_msg:'Votre compte est banni. Contactez admin.',price_sug:'Prix moyen dans cette zone',posted:'Publié le'}};
+
+// ===== ALGERIA DATA =====
+const WILAYAS=[{id:1,n:"Adrar"},{id:2,n:"Chlef"},{id:3,n:"Laghouat"},{id:4,n:"Oum El Bouaghi"},{id:5,n:"Batna"},{id:6,n:"Béjaïa"},{id:7,n:"Biskra"},{id:8,n:"Béchar"},{id:9,n:"Blida"},{id:10,n:"Bouira"},{id:11,n:"Tamanrasset"},{id:12,n:"Tébessa"},{id:13,n:"Tlemcen"},{id:14,n:"Tiaret"},{id:15,n:"Tizi Ouzou"},{id:16,n:"Alger"},{id:17,n:"Djelfa"},{id:18,n:"Jijel"},{id:19,n:"Sétif"},{id:20,n:"Saïda"},{id:21,n:"Skikda"},{id:22,n:"Sidi Bel Abbès"},{id:23,n:"Annaba"},{id:24,n:"Guelma"},{id:25,n:"Constantine"},{id:26,n:"Médéa"},{id:27,n:"Mostaganem"},{id:28,n:"M'Sila"},{id:29,n:"Mascara"},{id:30,n:"Ouargla"},{id:31,n:"Oran"},{id:32,n:"El Bayadh"},{id:33,n:"Illizi"},{id:34,n:"Bordj Bou Arréridj"},{id:35,n:"Boumerdès"},{id:36,n:"El Tarf"},{id:37,n:"Tindouf"},{id:38,n:"Tissemsilt"},{id:39,n:"El Oued"},{id:40,n:"Khenchela"},{id:41,n:"Souk Ahras"},{id:42,n:"Tipaza"},{id:43,n:"Mila"},{id:44,n:"Aïn Defla"},{id:45,n:"Naâma"},{id:46,n:"Aïn Témouchent"},{id:47,n:"Ghardaïa"},{id:48,n:"Relizane"},{id:49,n:"Timimoun"},{id:50,n:"Bordj Badji Mokhtar"},{id:51,n:"Ouled Djellal"},{id:52,n:"Béni Abbès"},{id:53,n:"In Salah"},{id:54,n:"In Guezzam"},{id:55,n:"Touggourt"},{id:56,n:"Djanet"},{id:57,n:"El M'Ghair"},{id:58,n:"El Meniaa"}];
+const BALADIAS={16:["Alger Centre","Sidi M'Hamed","El Madania","Belouizdad","Bab El Oued","Casbah","Bir Mourad Raïs","El Biar","Bouzaréah","Birkhadem","El Harrach","Baraki","Hussein Dey","Kouba","Ben Aknoun","Dely Brahim","Hydra","Mohammadia","Bordj El Kiffan","Cheraga","Souidania","Ouled Fayet","Aïn Benian","Draria","Baba Hassen","Saoula","Dar El Beïda","Bordj El Bahri","Bab Ezzouar"],31:["Oran Centre","Es Sénia","Bir El Djir","Arzew","Aïn El Turck","Misserghin","Sidi Chahmi","El Kerma","Mers El Kébir","Gdyel"],25:["Constantine Centre","El Khroub","Didouche Mourad","Ain Smara","Hamma Bouziane","Ibn Badis","Zighoud Youcef"],23:["Annaba Centre","El Bouni","El Hadjar","Chetaïbi","Seraidi","Aïn Berda","Berrahal"],9:["Blida Centre","Bougara","Chebli","Boufarik","Mouzaia","El Afroun","Ouled Yaïch","Larbaa"],15:["Tizi Ouzou Centre","Azazga","Ain El Hammam","Boghni","Draa Ben Khedda","Ouaguenoun","Makouda"],6:["Béjaïa Centre","Amizour","Kherrata","El Kseur","Tichy","Aokas","Darguina"],19:["Sétif Centre","El Eulma","Ain Oulmane","Ain Arnat","Guenzet","Bougaa"],35:["Boumerdès Centre","Khemis El Khechna","Boudouaou","Tidjelabine","Zemmouri","Ouled Moussa"],42:["Tipaza Centre","Cherchell","Hadjout","Bou Ismail","Koléa","Sidi Ghilès"]};
+const PROP_TYPES=[{id:'apartment',icon:'fas fa-building'},{id:'house',icon:'fas fa-home'},{id:'villa',icon:'fas fa-chess-rook'},{id:'land',icon:'fas fa-mountain'},{id:'commercial',icon:'fas fa-store'},{id:'factory',icon:'fas fa-industry'},{id:'clinic',icon:'fas fa-hospital'},{id:'school',icon:'fas fa-school'},{id:'office',icon:'fas fa-briefcase'}];
+const PRICE_AVG={16:{rent:{apartment:"80 000–250 000",villa:"300 000–800 000",office:"40 000–200 000",commercial:"100 000–500 000"},sale:{apartment:"8 000 000–25 000 000",villa:"80 000 000–300 000 000",land:"15 000 000–100 000 000",commercial:"10 000 000–80 000 000"}},31:{rent:{apartment:"50 000–180 000"},sale:{apartment:"5 000 000–18 000 000",villa:"30 000 000–120 000 000"}},25:{rent:{apartment:"40 000–130 000"},sale:{apartment:"4 000 000–14 000 000"}}};
+const FAQS={ar:[{q:"كيف أنشر إعلاناً؟",a:"انقر على 'أضف إعلاناً' في شريط التنقل، وأكمل الخطوات الخمس: النوع، الموقع، التفاصيل، التواصل، ثم الدفع. إعلانك سيكون مرئياً فور تأكيد الدفع."},{q:"كم يكلف نشر إعلان؟",a:"الإعلان العادي: 200 دج لمدة 30 يوماً. الإعلان VIP: 1000 دج لمدة 60 يوماً مع ظهوره في المقدمة."},{q:"كيف أدفع؟",a:"نقبل Baridimob وCIB وOreedoo Money. عملية الدفع آمنة ومؤمّنة."},{q:"هل البحث مجاني؟",a:"نعم، البحث عن العقارات مجاني تماماً للمشترين والمستأجرين."},{q:"كيف أتواصل مع البائع؟",a:"في صفحة الإعلان، انقر على زر 'اتصل' أو 'واتساب' للتواصل المباشر."}],fr:[{q:"Comment publier une annonce?",a:"Cliquez sur 'Publier' et suivez les 5 étapes. Votre annonce sera visible après paiement."},{q:"Combien coûte une annonce?",a:"Annonce standard: 200 DZD pour 30 jours. Annonce VIP: 1000 DZD pour 60 jours."},{q:"Comment payer?",a:"Nous acceptons Baridimob, CIB et Ooredoo Money."},{q:"La recherche est-elle gratuite?",a:"Oui, la recherche est totalement gratuite pour les acheteurs."},{q:"Comment contacter le vendeur?",a:"Sur la page de l'annonce, cliquez sur 'Appeler' ou 'WhatsApp'."}]};
+const REPORT_REASONS={ar:['سعر وهمي أو مزيف','معلومات خاطئة','صور مسروقة','موقع غير صحيح','إعلان مكرر','محتوى غير لائق','احتيال مشتبه به'],fr:['Prix fictif','Informations incorrectes','Photos volées','Localisation incorrecte','Annonce dupliquée','Contenu inapproprié','Fraude suspectée']};
+const IMG={apartment:'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80',house:'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80',villa:'https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=80',land:'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80',commercial:'https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?w=600&q=80',factory:'https://images.unsplash.com/photo-1565715736449-a7e6c9a5e0b7?w=600&q=80',clinic:'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80',school:'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80',office:'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80'};
+
+// ===== APP STATE =====
+let lang=localStorage.getItem('dz_lang')||'ar';
+let currentPage='home';
+let currentListingId=null;
+let currentStep=1;
+let filterTransType='';
+let formTransType='';
+let formPropType='';
+let uploadedImages=[];
+let isVIP=false;
+let pageNum=1;
+const PER_PAGE=10;
+let filteredListings=[];
+let adminLoggedIn=localStorage.getItem('dz_admin')==='true';
+
+// ===== LOCALSTORAGE =====
+const ls=(k,d=[])=>{try{return JSON.parse(localStorage.getItem(k))||d;}catch{return d;}};
+const ss=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+const getL=()=>ls('dzre_l',[]);
+const setL=v=>ss('dzre_l',v);
+const getFavs=()=>ls('dzre_f',[]);
+const setFavs=v=>ss('dzre_f',v);
+const getAlerts=()=>ls('dzre_a',[]);
+const setAlerts=v=>ss('dzre_a',v);
+const getTx=()=>ls('dzre_tx',[]);
+const setTx=v=>ss('dzre_tx',v);
+const getRep=()=>ls('dzre_rep',[]);
+const setRep=v=>ss('dzre_rep',v);
+const getBanned=()=>ls('dzre_ban',[]);
+const setBanned=v=>ss('dzre_ban',v);
+const getInq=()=>ls('dzre_inq',[]);
+const setInq=v=>ss('dzre_inq',v);
+
+// ===== SEED DATA =====
+function seedData(){
+  // Seed data removed — site starts empty for real use.
+  // Uncomment below to re-add demo listings for testing.
+}
+
+// ===== TRANSLATIONS =====
+function t(k){return T[lang][k]||T.ar[k]||k;}
+function applyT(){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(T[lang][k])el.textContent=T[lang][k];});
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const k=el.getAttribute('data-i18n-ph');if(T[lang][k])el.placeholder=T[lang][k];});
+}
+function toggleLang(){
+  lang=lang==='ar'?'fr':'ar';
+  localStorage.setItem('dz_lang',lang);
+  const h=document.documentElement;
+  if(lang==='fr'){h.setAttribute('lang','fr');h.setAttribute('dir','ltr');document.body.classList.add('ltr');}
+  else{h.setAttribute('lang','ar');h.setAttribute('dir','rtl');document.body.classList.remove('ltr');}
+  document.getElementById('lang-btn').textContent=lang==='ar'?'FR':'AR';
+  applyT();buildPropGrid();renderFAQ();populateWilayas();
+  if(currentPage==='home'){filteredListings=[...getL().filter(l=>l.status==='active')];renderListings(filteredListings);}
+  if(currentPage==='my-listings')renderMyListings();
+  if(currentPage==='favorites')renderFavorites();
+  if(currentPage==='alerts')renderAlerts();
+}
+function toggleTheme(){
+  const d=document.documentElement.getAttribute('data-theme')==='dark';
+  document.documentElement.setAttribute('data-theme',d?'light':'dark');
+  document.getElementById('theme-btn').innerHTML=d?'<i class="fas fa-moon"></i>':'<i class="fas fa-sun"></i>';
+  localStorage.setItem('dz_theme',d?'light':'dark');
+}
+function initTheme(){
+  const th=localStorage.getItem('dz_theme')||'light';
+  document.documentElement.setAttribute('data-theme',th);
+  document.getElementById('theme-btn').innerHTML=th==='dark'?'<i class="fas fa-sun"></i>':'<i class="fas fa-moon"></i>';
+}
+
+// ===== PAGE NAV =====
+function showPage(page){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+page).classList.add('active');
+  currentPage=page;
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.getElementById('nav-links').classList.remove('open');
+  if(page==='home'){filteredListings=[...getL().filter(l=>l.status==='active')];sortAndRender();updateStats();}
+  if(page==='my-listings')initMyListings();
+  if(page==='favorites')renderFavorites();
+  if(page==='alerts')renderAlerts();
+  if(page==='add-listing')initAddListing();
+  if(page==='contact')renderFAQ();
+  if(page==='admin')initAdmin();
+  if(page==='detail'&&currentListingId)renderDetail(currentListingId);
+  updateFavCount();
+}
+function toggleMenu(){document.getElementById('nav-links').classList.toggle('open');}
+
+// ===== WILAYAS/BALADIAS =====
+function populateWilayas(){
+  ['f-wilaya','s-wilaya','a-wilaya'].forEach(id=>{
+    const sel=document.getElementById(id);if(!sel)return;
+    const first=sel.options[0]?.textContent||'';
+    sel.innerHTML=`<option value="">${first}</option>`;
+    WILAYAS.forEach(w=>{const o=document.createElement('option');o.value=w.n;o.textContent=w.n;sel.appendChild(o);});
+  });
+}
+function populateBaladias(selId,wilaya){
+  const sel=document.getElementById(selId);if(!sel)return;
+  const w=WILAYAS.find(x=>x.n===wilaya);
+  const bals=w?BALADIAS[w.id]||[]:[];
+  sel.innerHTML=`<option value="">${selId==='f-baladia'?t('all_baladias'):t('select_baladia')}</option>`;
+  bals.forEach(b=>{const o=document.createElement('option');o.value=b;o.textContent=b;sel.appendChild(o);});
+}
+
+// ===== SEARCH =====
+function doSearch(){
+  showLoading(true);
+  const q=document.getElementById('main-search').value.toLowerCase().trim();
+  const trans=filterTransType;
+  const prop=document.getElementById('f-proptype').value;
+  const wilaya=document.getElementById('f-wilaya').value;
+  const baladia=document.getElementById('f-baladia').value;
+  const minP=parseFloat(document.getElementById('f-minprice').value)||0;
+  const maxP=parseFloat(document.getElementById('f-maxprice').value)||Infinity;
+  const minA=parseFloat(document.getElementById('f-minarea').value)||0;
+  const maxA=parseFloat(document.getElementById('f-maxarea').value)||Infinity;
+  setTimeout(()=>{
+    let r=getL().filter(l=>l.status==='active');
+    if(q)r=r.filter(l=>l.wilaya.toLowerCase().includes(q)||l.baladia.toLowerCase().includes(q)||l.description.toLowerCase().includes(q)||l.propertyType.toLowerCase().includes(q)||l.address.toLowerCase().includes(q));
+    if(trans)r=r.filter(l=>l.transactionType===trans);
+    if(prop)r=r.filter(l=>l.propertyType===prop);
+    if(wilaya)r=r.filter(l=>l.wilaya===wilaya);
+    if(baladia)r=r.filter(l=>l.baladia===baladia);
+    r=r.filter(l=>l.price>=minP&&l.price<=maxP&&l.area>=minA&&l.area<=maxA);
+    filteredListings=r;pageNum=1;sortAndRender();
+    document.getElementById('advanced-filters').classList.add('hidden');
+    showLoading(false);
+    const title=document.getElementById('results-title');
+    if(title)title.textContent=q?`"${q}"`:t('latest_listings');
+  },600);
+}
+function sortAndRender(){
+  const s=document.getElementById('sort-select')?.value||'newest';
+  let sorted=[...filteredListings];
+  sorted.sort((a,b)=>{
+    if(a.isVIP&&!b.isVIP)return -1;if(!a.isVIP&&b.isVIP)return 1;
+    if(s==='newest')return new Date(b.datePosted)-new Date(a.datePosted);
+    if(s==='price_asc')return a.price-b.price;
+    if(s==='price_desc')return b.price-a.price;
+    if(s==='views')return b.views-a.views;
+    return 0;
+  });
+  renderListings(sorted);
+}
+function resetFilters(){
+  document.getElementById('main-search').value='';
+  ['f-proptype','f-wilaya','f-baladia'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  ['f-minprice','f-maxprice','f-minarea','f-maxarea'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  filterTransType='';
+  document.querySelectorAll('#advanced-filters .type-btn').forEach(b=>b.classList.remove('active'));
+  filteredListings=[...getL().filter(l=>l.status==='active')];pageNum=1;sortAndRender();
+}
+function setTransFilter(type,btn){
+  filterTransType=filterTransType===type?'':(document.querySelectorAll('#advanced-filters .type-btn').forEach(b=>b.classList.remove('active')),btn.classList.add('active'),type);
+}
+function toggleFilters(){document.getElementById('advanced-filters').classList.toggle('hidden');}
+function filterByType(type){document.getElementById('f-proptype').value=type;showPage('home');doSearch();}
+function showAutocomplete(val){
+  const list=document.getElementById('autocomplete-list');
+  if(!val||val.length<2){list.classList.add('hidden');return;}
+  const low=val.toLowerCase();const sugg=new Set();
+  WILAYAS.forEach(w=>{if(w.n.toLowerCase().includes(low))sugg.add(w.n);});
+  Object.values(BALADIAS).flat().forEach(b=>{if(b.toLowerCase().includes(low))sugg.add(b);});
+  getL().forEach(l=>{if(l.baladia.toLowerCase().includes(low))sugg.add(`${l.baladia}, ${l.wilaya}`);});
+  const items=[...sugg].slice(0,8);
+  if(!items.length){list.classList.add('hidden');return;}
+  list.innerHTML=items.map(s=>`<div onclick="document.getElementById('main-search').value='${s.replace(/'/g,"\\'")}';document.getElementById('autocomplete-list').classList.add('hidden');doSearch()"><i class='fas fa-map-marker-alt' style='color:var(--gold);margin-left:6px'></i>${s}</div>`).join('');
+  list.classList.remove('hidden');
+}
+document.addEventListener('click',e=>{if(!e.target.closest('.search-input-wrap'))document.getElementById('autocomplete-list')?.classList.add('hidden');});
+
+// ===== RENDER LISTINGS =====
+function renderListings(listings){
+  const grid=document.getElementById('listings-grid');
+  const noRes=document.getElementById('no-results');
+  const cnt=document.getElementById('results-count');
+  const favs=getFavs();
+  if(!listings.length){
+    grid.innerHTML='';noRes.classList.remove('hidden');
+    if(cnt)cnt.textContent=`0 ${t('stat_listings')}`;
+    document.getElementById('pagination').innerHTML='';
+    const totalSiteListings=getL().filter(l=>l.status==='active').length;
+    const titleEl=noRes.querySelector('h3');
+    const msgEl=noRes.querySelector('p');
+    if(totalSiteListings===0){
+      titleEl.textContent=lang==='fr'?'Aucune annonce pour le moment':'لا توجد إعلانات بعد';
+      msgEl.innerHTML=lang==='fr'
+        ?`Soyez le premier à publier un bien.`
+        :`كن أول من ينشر إعلاناً.`;
+    } else {
+      titleEl.textContent=t('no_results_title');
+      msgEl.textContent=t('no_results_msg');
+    }
+    return;
+  }
+  noRes.classList.add('hidden');
+  if(cnt)cnt.textContent=`${listings.length} ${t('stat_listings')}`;
+  const total=Math.ceil(listings.length/PER_PAGE);
+  const slice=listings.slice((pageNum-1)*PER_PAGE,pageNum*PER_PAGE);
+  grid.innerHTML=slice.map(l=>cardHTML(l,favs)).join('');
+  renderPagination(total,listings);
+}
+function cardHTML(l,favs){
+  const isFav=favs.includes(l.id);
+  const img=l.images?.length?l.images[0]:IMG[l.propertyType]||IMG.apartment;
+  const pBadge=l.transactionType==='rent'?`<span class="card-badge badge-rent">${t('rent')}</span>`:`<span class="card-badge badge-sale">${t('sale')}</span>`;
+  const vBadge=l.isVIP?`<span class="badge-vip"><i class="fas fa-crown"></i> VIP</span>`:'';
+  const meta=[];
+  if(l.area)meta.push(`<span class="meta-item"><i class="fas fa-ruler-combined"></i>${l.area}م²</span>`);
+  if(l.rooms)meta.push(`<span class="meta-item"><i class="fas fa-door-open"></i>${l.rooms}</span>`);
+  meta.push(`<span class="meta-item"><i class="fas fa-eye"></i>${l.views||0}</span>`);
+  return `<div class="listing-card${l.isVIP?' vip':''}" onclick="openListing('${l.id}')">
+    <div class="card-img">
+      <img src="${img}" alt="${t(l.propertyType)}" loading="lazy" onerror="this.src='${IMG[l.propertyType]||IMG.apartment}'">
+      ${pBadge}${vBadge}
+      <button class="card-fav${isFav?' active':''}" onclick="event.stopPropagation();toggleFav('${l.id}',this)"><i class="fa${isFav?'s':'r'} fa-heart"></i></button>
+    </div>
+    <div class="card-body">
+      <div class="card-type">${t(l.propertyType)}</div>
+      <div class="card-price">${fmtP(l.price)} <span>DZD${l.transactionType==='rent'?'/'+t('rent').slice(0,2):''}</span></div>
+      <div class="card-loc"><i class="fas fa-map-marker-alt"></i>${l.baladia}, ${l.wilaya}</div>
+      <div class="card-meta">${meta.join('')}</div>
+    </div>
+  </div>`;
+}
+function renderPagination(total,listings){
+  const pg=document.getElementById('pagination');
+  if(total<=1){pg.innerHTML='';return;}
+  let html='';
+  if(pageNum>1)html+=`<button class="page-btn" onclick="goPage(${pageNum-1})"><i class="fas fa-chevron-right"></i></button>`;
+  for(let i=1;i<=total;i++){
+    if(i===1||i===total||Math.abs(i-pageNum)<=2)html+=`<button class="page-btn${i===pageNum?' active':''}" onclick="goPage(${i})">${i}</button>`;
+    else if(Math.abs(i-pageNum)===3)html+=`<span style="padding:0 4px;color:var(--text3)">...</span>`;
+  }
+  if(pageNum<total)html+=`<button class="page-btn" onclick="goPage(${pageNum+1})"><i class="fas fa-chevron-left"></i></button>`;
+  pg.innerHTML=html;
+}
+function goPage(n){pageNum=n;sortAndRender();document.getElementById('page-home')?.scrollIntoView({behavior:'smooth'});}
+
+// ===== OPEN LISTING =====
+function openListing(id){
+  currentListingId=id;
+  const all=getL();const idx=all.findIndex(l=>l.id===id);
+  if(idx>=0){all[idx].views=(all[idx].views||0)+1;setL(all);}
+  showPage('detail');
+}
+function renderDetail(id){
+  const l=getL().find(x=>x.id===id);if(!l){showPage('home');return;}
+  document.getElementById('detail-title').textContent=`${t(l.propertyType)} — ${l.baladia}, ${l.wilaya}`;
+  document.getElementById('detail-price').textContent=`${fmtP(l.price)} DZD${l.transactionType==='rent'?'/'+t('rent'):''}`;
+  document.getElementById('detail-location').innerHTML=`<i class="fas fa-map-marker-alt"></i> ${l.baladia}, ${l.wilaya}${l.address?' — '+l.address:''}`;
+  const b=document.getElementById('detail-badge');b.textContent=t(l.transactionType);b.className=`card-badge ${l.transactionType==='rent'?'badge-rent':'badge-sale'}`;
+  const imgs=l.images?.length?l.images:[IMG[l.propertyType]||IMG.apartment];
+  document.getElementById('main-img').src=imgs[0];
+  document.getElementById('gallery-thumbs').innerHTML=imgs.map((img,i)=>`<img src="${img}" class="${i===0?'active':''}" onclick="changeImg('${img.replace(/'/g,"\\'")}',this)" onerror="this.src='${IMG[l.propertyType]||IMG.apartment}'">`).join('');
+  const attrs=[{l:t('prop_type'),v:t(l.propertyType)},{l:t('f_type'),v:t(l.transactionType)},{l:t('price_lbl'),v:fmtP(l.price)+' DZD'},{l:t('area_lbl'),v:l.area+'م²'},{l:t('f_wilaya'),v:l.wilaya},{l:t('f_baladia'),v:l.baladia}];
+  if(l.rooms)attrs.push({l:t('rooms_lbl'),v:l.rooms});
+  if(l.floor!==null&&l.floor!==undefined&&l.floor!=='')attrs.push({l:t('floor_lbl'),v:l.floor});
+  attrs.push({l:t('th_views'),v:l.views||0});
+  attrs.push({l:t('posted'),v:new Date(l.datePosted).toLocaleDateString(lang==='ar'?'ar-DZ':'fr-DZ')});
+  document.getElementById('detail-attrs').innerHTML=attrs.map(a=>`<div class="attr-item"><span class="attr-label">${a.l}</span><span class="attr-val">${a.v}</span></div>`).join('');
+  document.getElementById('detail-desc').textContent=l.description;
+  document.getElementById('seller-avatar').textContent=l.sellerName?l.sellerName[0]:'?';
+  document.getElementById('seller-name').textContent=l.sellerName;
+  document.getElementById('seller-joined').textContent=new Date(l.datePosted).toLocaleDateString(lang==='ar'?'ar-DZ':'fr-DZ');
+  document.getElementById('phone-reveal').innerHTML=`<i class="fas fa-eye"></i> ${t('click_phone')}`;
+  document.getElementById('phone-reveal').style.display='';
+  document.getElementById('btn-call').classList.add('hidden');
+  // QR
+  const qrEl=document.getElementById('qrcode');qrEl.innerHTML='';
+  try{new QRCode(qrEl,{text:`${location.href}#${id}`,width:140,height:140,colorDark:'#1A365D',colorLight:'#ffffff'});}
+  catch(e){qrEl.innerHTML=`<div style="padding:16px;background:var(--bg3);border-radius:8px;font-size:0.8rem">ID: ${id}</div>`;}
+  // Similar
+  const sim=getL().filter(x=>x.id!==id&&x.status==='active'&&(x.wilaya===l.wilaya||x.propertyType===l.propertyType)).slice(0,4);
+  document.getElementById('similar-grid').innerHTML=sim.map(s=>`<div class="similar-card" onclick="openListing('${s.id}')"><img src="${s.images?.length?s.images[0]:IMG[s.propertyType]||IMG.apartment}" onerror="this.src='${IMG[s.propertyType]||IMG.apartment}'"><div class="similar-card-body"><div class="similar-card-price">${fmtP(s.price)} DZD</div><div class="similar-card-loc"><i class="fas fa-map-marker-alt"></i> ${s.baladia}</div></div></div>`).join('')||`<p style="color:var(--text3);font-size:0.85rem">${t('no_results_title')}</p>`;
+}
+function changeImg(src,el){document.getElementById('main-img').src=src;document.querySelectorAll('.gallery-thumbs img').forEach(i=>i.classList.remove('active'));el.classList.add('active');}
+function revealPhone(){const l=getL().find(x=>x.id===currentListingId);if(!l)
